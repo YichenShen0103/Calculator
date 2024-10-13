@@ -1,0 +1,3 @@
+D:/code/vim/DataStr&Algr/Data Structures & Algorithms -- Calculators/build/CMakeFiles/Calculator.dir
+D:/code/vim/DataStr&Algr/Data Structures & Algorithms -- Calculators/build/CMakeFiles/edit_cache.dir
+D:/code/vim/DataStr&Algr/Data Structures & Algorithms -- Calculators/build/CMakeFiles/rebuild_cache.dir
