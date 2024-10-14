@@ -39,7 +39,7 @@ void Expression::infixToPostfix()
         // 如果当前字符是一个数字或字母（操作数），直接添加到后缀表达式中
         if (isdigit(ch))
         {
-            while (i < expr.length() && isdigit(expr[i]))
+            while (i < expr.length() && (isdigit(expr[i]) || expr[i] == '.'))
             {
                 postfix += expr[i];
                 i++;
@@ -47,10 +47,15 @@ void Expression::infixToPostfix()
             postfix += ' '; // 加上空格，以区分数字和操作符
             i--;            // 回退一步，因为当前字符已经处理过了
         }
-        else if (isalpha(ch))
+        else if (isalpha(ch) || ch == '_')
         {
-            postfix += ch;
+            while (i < expr.length() && (isalpha(expr[i]) || isdigit(expr[i]) || expr[i] == '_'))
+            {
+                postfix += expr[i];
+                i++;
+            }
             postfix += ' '; // 加上空格，以区分字母和操作符
+            i--;            // 回退一步，因为当前字符已经处理过了
         }
         else if (ch == '(')
         {
@@ -114,17 +119,26 @@ Expression::Expression()
 {
     cout << "Please input a expression (donnot include <Space>): ";
     cin >> expr;
-    set<char> variables; // 用于存储变量
+    set<string> variables; // 用于存储变量
     for (int i = 0; i < expr.length(); i++)
     {
         char ch = expr[i];
         if (isalpha(ch))
-            variables.insert(ch); // 统计变量
+        {
+            string var = "";
+            while (i < expr.length() && (isalpha(expr[i]) || isdigit(expr[i]) || expr[i] == '_'))
+            {
+                var += expr[i];
+                i++;
+            }
+            variables.insert(var); // 统计变量
+            i--;                   // 回退一步，因为当前字符已经处理过了
+        }
     }
-    varList = vector<char>(variables.begin(), variables.end()); // 变量列表
-    varNum = variables.size();                                  // 变量个数
-    isPostFix = false;                                          // 表达式是否为后缀表达式
-    varVal = vector<double>(varNum, NAN);                       // 变量值初始化为 NAN
+    varList = vector<string>(variables.begin(), variables.end()); // 变量列表
+    varNum = variables.size();                                    // 变量个数
+    isPostFix = false;                                            // 表达式是否为后缀表达式
+    varVal = vector<double>(varNum, NAN);                         // 变量值初始化为 NAN
 }
 
 /*
@@ -141,6 +155,7 @@ double Expression::calculate()
 {
     if (!isPostFix)
         infixToPostfix();
+
     vector<double> sta(expr.size());
     int top = 0;
 
@@ -151,19 +166,43 @@ double Expression::calculate()
         if (isdigit(expr[i]))
         {
             double num = 0;
-            while (i < expr.size() && isdigit(expr[i]))
+            while (i < expr.size() && (isdigit(expr[i]) || expr[i] == '.'))
             {
-                num = num * 10 + (expr[i] - '0'); // 计算数字
+                if (expr[i] == '.') // 处理小数点
+                {
+                    double fraction = 0.1;
+                    i++;
+                    while (i < expr.size() && isdigit(expr[i]))
+                    {
+                        num += (expr[i] - '0') * fraction; // 累加小数部分
+                        fraction *= 0.1;
+                        i++;
+                    }
+                    break; // 小数部分处理完毕
+                }
+                else
+                {
+                    num = num * 10 + (expr[i] - '0'); // 累加整数部分
+                }
                 i++;
             }
             sta[top++] = num; // 入栈
+            i--;              // 回退一步
         }
         else if (isalpha(expr[i]))
         {
             int index = -1; // 变量索引
+            string var = "";
+            while (i < expr.size() && (isalpha(expr[i]) || isdigit(expr[i]) || expr[i] == '_'))
+            {
+                var += expr[i];
+                i++;
+            }
+            i--; // 回退一步，因为当前字符已经处理过了
+
             for (int j = 0; j < varNum; j++)
             {
-                if (expr[i] == varList[j])
+                if (var == varList[j])
                 {
                     index = j; // 找到变量索引
                     break;
@@ -245,7 +284,7 @@ double Expression::calculate()
  *        double val 变量值
  * @return 函数无返回值
  */
-void Expression::varAssign(char var, double val)
+void Expression::varAssign(string var, double val)
 {
     for (int i = 0; i < varNum; i++)
     {

@@ -81,8 +81,8 @@ void ScienceCalculator()
         }
         case '3': // 给储存的变量赋值
         {
-            char variable;
-            int value;
+            string variable;
+            double value;
             cout << "Please enter the variable and its value (split by <Space>): "; // 输入变量和值
             cin >> variable >> value;
             M->varAssign(variable, value); // 给 M 中的变量赋值
