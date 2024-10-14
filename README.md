@@ -1,6 +1,6 @@
 # Calculator
 
-> This repo is created to store my source code for the series Lab for Data Structure and Algorithms 24 Fall, RUC. 
+> This repo is created to store my source code for the series Lab of Data Structure and Algorithms 24 Fall, RUC. 
 
 
 
