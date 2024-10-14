@@ -1,10 +1,10 @@
 /*
- * Project:    Calculator02
+ * Project:    Calculator
  * Author:     Yichen Shen
- * Date:       2024-10-13
+ * Date:       2024-10-14
  * Language:   C++
- * Version:    V1.0
- * Scale:      about 1600 lines in total
+ * Version:    V2.1
+ * Scale:      about 1685 lines in total
  */
 
 #include "Calculators.h" // 包含所有计算器和分菜单的头文件
