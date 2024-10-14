@@ -1,0 +1,38 @@
+[
+{
+  "directory": "D:/code/vim/DataStr&Algr/Data Structures & Algorithms -- Calculators/build",
+  "command": "g++  @CMakeFiles/Calculator.dir/includes_CXX.rsp -g -o CMakeFiles\\Calculator.dir\\src\\Calculators.cpp.obj -c \"D:\\code\\vim\\DataStr&Algr\\Data Structures & Algorithms -- Calculators\\src\\Calculators.cpp\"",
+  "file": "D:/code/vim/DataStr&Algr/Data Structures & Algorithms -- Calculators/src/Calculators.cpp",
+  "output": "CMakeFiles/Calculator.dir/src/Calculators.cpp.obj"
+},
+{
+  "directory": "D:/code/vim/DataStr&Algr/Data Structures & Algorithms -- Calculators/build",
+  "command": "g++  @CMakeFiles/Calculator.dir/includes_CXX.rsp -g -o CMakeFiles\\Calculator.dir\\src\\Expression.cpp.obj -c \"D:\\code\\vim\\DataStr&Algr\\Data Structures & Algorithms -- Calculators\\src\\Expression.cpp\"",
+  "file": "D:/code/vim/DataStr&Algr/Data Structures & Algorithms -- Calculators/src/Expression.cpp",
+  "output": "CMakeFiles/Calculator.dir/src/Expression.cpp.obj"
+},
+{
+  "directory": "D:/code/vim/DataStr&Algr/Data Structures & Algorithms -- Calculators/build",
+  "command": "g++  @CMakeFiles/Calculator.dir/includes_CXX.rsp -g -o CMakeFiles\\Calculator.dir\\src\\ListNode.cpp.obj -c \"D:\\code\\vim\\DataStr&Algr\\Data Structures & Algorithms -- Calculators\\src\\ListNode.cpp\"",
+  "file": "D:/code/vim/DataStr&Algr/Data Structures & Algorithms -- Calculators/src/ListNode.cpp",
+  "output": "CMakeFiles/Calculator.dir/src/ListNode.cpp.obj"
+},
+{
+  "directory": "D:/code/vim/DataStr&Algr/Data Structures & Algorithms -- Calculators/build",
+  "command": "g++  @CMakeFiles/Calculator.dir/includes_CXX.rsp -g -o CMakeFiles\\Calculator.dir\\src\\Polyn.cpp.obj -c \"D:\\code\\vim\\DataStr&Algr\\Data Structures & Algorithms -- Calculators\\src\\Polyn.cpp\"",
+  "file": "D:/code/vim/DataStr&Algr/Data Structures & Algorithms -- Calculators/src/Polyn.cpp",
+  "output": "CMakeFiles/Calculator.dir/src/Polyn.cpp.obj"
+},
+{
+  "directory": "D:/code/vim/DataStr&Algr/Data Structures & Algorithms -- Calculators/build",
+  "command": "g++  @CMakeFiles/Calculator.dir/includes_CXX.rsp -g -o CMakeFiles\\Calculator.dir\\src\\Vector.cpp.obj -c \"D:\\code\\vim\\DataStr&Algr\\Data Structures & Algorithms -- Calculators\\src\\Vector.cpp\"",
+  "file": "D:/code/vim/DataStr&Algr/Data Structures & Algorithms -- Calculators/src/Vector.cpp",
+  "output": "CMakeFiles/Calculator.dir/src/Vector.cpp.obj"
+},
+{
+  "directory": "D:/code/vim/DataStr&Algr/Data Structures & Algorithms -- Calculators/build",
+  "command": "g++  @CMakeFiles/Calculator.dir/includes_CXX.rsp -g -o CMakeFiles\\Calculator.dir\\src\\main.cpp.obj -c \"D:\\code\\vim\\DataStr&Algr\\Data Structures & Algorithms -- Calculators\\src\\main.cpp\"",
+  "file": "D:/code/vim/DataStr&Algr/Data Structures & Algorithms -- Calculators/src/main.cpp",
+  "output": "CMakeFiles/Calculator.dir/src/main.cpp.obj"
+}
+]
