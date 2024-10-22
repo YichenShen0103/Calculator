@@ -13,9 +13,21 @@
 },
 {
   "directory": "D:/code/vim/DataStr&Algr/Data Structures & Algorithms -- Calculators/build",
+  "command": "g++  @CMakeFiles/Calculator.dir/includes_CXX.rsp -g -o CMakeFiles\\Calculator.dir\\src\\Function.cpp.obj -c \"D:\\code\\vim\\DataStr&Algr\\Data Structures & Algorithms -- Calculators\\src\\Function.cpp\"",
+  "file": "D:/code/vim/DataStr&Algr/Data Structures & Algorithms -- Calculators/src/Function.cpp",
+  "output": "CMakeFiles/Calculator.dir/src/Function.cpp.obj"
+},
+{
+  "directory": "D:/code/vim/DataStr&Algr/Data Structures & Algorithms -- Calculators/build",
   "command": "g++  @CMakeFiles/Calculator.dir/includes_CXX.rsp -g -o CMakeFiles\\Calculator.dir\\src\\ListNode.cpp.obj -c \"D:\\code\\vim\\DataStr&Algr\\Data Structures & Algorithms -- Calculators\\src\\ListNode.cpp\"",
   "file": "D:/code/vim/DataStr&Algr/Data Structures & Algorithms -- Calculators/src/ListNode.cpp",
   "output": "CMakeFiles/Calculator.dir/src/ListNode.cpp.obj"
+},
+{
+  "directory": "D:/code/vim/DataStr&Algr/Data Structures & Algorithms -- Calculators/build",
+  "command": "g++  @CMakeFiles/Calculator.dir/includes_CXX.rsp -g -o CMakeFiles\\Calculator.dir\\src\\Matrix.cpp.obj -c \"D:\\code\\vim\\DataStr&Algr\\Data Structures & Algorithms -- Calculators\\src\\Matrix.cpp\"",
+  "file": "D:/code/vim/DataStr&Algr/Data Structures & Algorithms -- Calculators/src/Matrix.cpp",
+  "output": "CMakeFiles/Calculator.dir/src/Matrix.cpp.obj"
 },
 {
   "directory": "D:/code/vim/DataStr&Algr/Data Structures & Algorithms -- Calculators/build",

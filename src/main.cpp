@@ -1,15 +1,23 @@
 /*
  * Project:    Calculator
  * Author:     Yichen Shen
- * Date:       2024-10-14
+ * Date:       2024-10-22
  * Language:   C++
- * Version:    V2.1
- * Scale:      about 1685 lines in total
+ * Version:    V3.0
+ * Scale:      about 2600 lines in total
+ */
+
+/*
+ * TODO
+ * 1. 实现函数计算器的函数调用
  */
 
 #include "Calculators.h" // 包含所有计算器和分菜单的头文件
+#include "Function.h"
 #include <iostream>
+#include <unordered_map>
 using namespace std;
+unordered_map<string, Function *> functions; // 定义一个变量哈希表
 
 int main()
 {
@@ -19,6 +27,8 @@ int main()
     cout << "2. Vector Calculator" << endl;
     cout << "3. Polynomial Calculator with Linked List" << endl;
     cout << "4. Science Calculator supporting variable" << endl;
+    cout << "5. Function Calculator" << endl;
+    cout << "6. Matrix Calculator" << endl;
     cout << "q. Exit" << endl;
     cout << "Please select an option: ";
     char mode; // 选择的模式
@@ -47,6 +57,18 @@ int main()
     {
         // 科学计算器（支持变量）
         ScienceCalculator();
+        break;
+    }
+    case '5':
+    {
+        // 函数计算器
+        FunctionCalculator();
+        break;
+    }
+    case '6':
+    {
+        // 矩阵计算器
+        MatrixCalculator();
         break;
     }
     case 'q':

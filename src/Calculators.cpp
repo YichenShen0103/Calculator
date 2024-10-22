@@ -3,8 +3,151 @@
 #include "Polyn.h"       // 包含 Polyn 类声明
 #include "ListNode.h"    // 包含 ListNode 类声明
 #include "Expression.h"  // 包含 Expression 类声明
+#include "Function.h"    // 包含 Function 类声明
+#include "Matrix.h"      // 包含 Matrix 类声明
 #include <iostream>
+#include <iomanip>
+#include <unordered_map>
 using namespace std;
+
+extern unordered_map<string, Function *> functions; // 全局函数表
+
+/*
+ * @brief 矩阵计算器的主函数
+ * @return 函数无返回值
+ */
+void MatrixCalculator()
+{
+    cout << "-------------------" << endl;
+    cout << "Welcome to MatrixCalculator!" << endl;
+    while (true)
+    {
+        char mode = menu('M'); // 显示菜单并获取用户选择
+        switch (mode)
+        {
+        case '1': // 矩阵加法
+        {
+            int coln, rown, colm, rowm;
+            cout << "Input the dimension of the first matrix (rows cols): "; // 输入矩阵的维度
+            cin >> rown >> coln;
+            Matrix *M1 = new Matrix(rown, coln);                              // 创建第一个矩阵
+            cout << "Input the dimension of the second matrix (rows cols): "; // 输入矩阵的维度
+            cin >> rowm >> colm;
+            Matrix *M2 = new Matrix(rowm, colm); // 创建第二个矩阵
+            cout << "M1: " << endl;
+            M1->printMatrix();
+            cout << "M2: " << endl;
+            M2->printMatrix();
+            M1->addMatrix(M2); // 加法运算
+            cout << "M1 + M2: " << endl;
+            M1->printMatrix();
+            delete M1; // 释放内存
+            break;
+        }
+        case '2': // 矩阵减法
+        {
+            int coln, rown, colm, rowm;
+            cout << "Input the dimension of the first matrix (rows cols): "; // 输入矩阵的维度
+            cin >> rown >> coln;
+            Matrix *M1 = new Matrix(rown, coln);                              // 创建第一个矩阵
+            cout << "Input the dimension of the second matrix (rows cols): "; // 输入矩阵的维度
+            cin >> rowm >> colm;
+            Matrix *M2 = new Matrix(rowm, colm); // 创建第二个矩阵
+            cout << "M1: " << endl;
+            M1->printMatrix();
+            cout << "M2: " << endl;
+            M2->printMatrix();
+            M1->subtractMatrix(M2); // 减法运算
+            cout << "M1 - M2: " << endl;
+            M1->printMatrix();
+            delete M1; // 释放内存
+            break;
+        }
+        case '3': // 帮助信息
+        {
+            cout << "PolynCalculator_ListNode is a simple calculator for polynomials." << endl;
+            cout << "This version uses ListNodes to implement the same functionality." << endl;
+            cout << "You can add/subtract two polynomials by inputting their degrees and coefficients." << endl;
+            cout << "For more detail, please read our instructions." << endl;
+            break;
+        }
+        case 'm': // 矩阵乘法
+        {
+            int coln, rown, colm, rowm;
+            cout << "Input the dimension of the first matrix (rows cols): "; // 输入矩阵的维度
+            cin >> rown >> coln;
+            Matrix *M1 = new Matrix(rown, coln);                              // 创建第一个矩阵
+            cout << "Input the dimension of the second matrix (rows cols): "; // 输入矩阵的维度
+            cin >> rowm >> colm;
+            Matrix *M2 = new Matrix(rowm, colm); // 创建第二个矩阵
+            cout << "M1: " << endl;
+            M1->printMatrix();
+            cout << "M2: " << endl;
+            M2->printMatrix();
+            M1->multiplyMatrix(M2); // 乘法运算
+            cout << "M1 * M2: " << endl;
+            M1->printMatrix();
+            delete M1; // 释放内存
+            break;
+        }
+        case 'd': // 矩阵的行列式
+        {
+            int row;
+            cout << "Please input the dimension of the matrix: "; // 输入矩阵的维度
+            cin >> row;
+            Matrix *M = new Matrix(row, row); // 创建矩阵
+            cout << "M: " << endl;
+            M->printMatrix();
+            cout << "det(M): " << M->determinant() << endl;
+            delete M; // 释放内存
+            break;
+        }
+        case 't': // 矩阵转置
+        {
+            int row, col;
+            cout << "Please input the dimension of the matrix(rows cols): "; // 输入矩阵的维度
+            cin >> row >> col;
+            Matrix *M = new Matrix(row, col); // 创建矩阵
+            cout << "M: " << endl;
+            M->printMatrix();
+            M->T(); // 转置矩阵
+            cout << "M^T: " << endl;
+            M->printMatrix();
+            delete M; // 释放内存
+            break;
+            break;
+        }
+        case 'e': // 矩阵的特征值
+        {
+            int row;
+            cout << "Please input the dimension of the matrix: "; // 输入矩阵的维度
+            cin >> row;
+            Matrix *M = new Matrix(row, row); // 创建矩阵
+            cout << "M: " << endl;
+            M->printMatrix();
+            M->eigenValue();
+            cout << "Eigenvalues (results have been rounded to five decimal places): " << endl;
+            for (int i = 0; i < row; i++)
+            {
+                cout << fixed << setprecision(5) << M->eigenVal[i] << " ";
+            }
+            cout << endl;
+            delete M; // 释放内存
+            break;
+        }
+        case 'q': // 退出程序
+        {
+            cout << "Exiting PolynCalculator..." << endl;
+            return;
+        }
+        default: // 输入错误
+        {
+            cout << "Invalid input!" << endl;
+            break;
+        }
+        }
+    }
+}
 
 /*
  * @brief 科学计算器的菜单函数
@@ -127,7 +270,7 @@ void Vectorcalculator()
     cout << "Welcome to VectorCalculator!" << endl;
     while (true)
     {
-        char mode = menu(); // 显示菜单并获取用户选择
+        char mode = menu('V'); // 显示菜单并获取用户选择
         switch (mode)
         {
         case '1': // 向量加法
@@ -211,7 +354,7 @@ void Polyncalculator()
     cout << "Welcome to PolynCalculator!" << endl;
     while (true)
     {
-        char mode = menu(); // 显示菜单并获取用户选择
+        char mode = menu('P'); // 显示菜单并获取用户选择
         switch (mode)
         {
         case '1': // 多项式加法
@@ -312,29 +455,42 @@ void Polyncalculator()
  * @brief 三个计算器的模板菜单函数
  * @return char 选择的选项
  */
-char menu()
+char menu(char cal)
 {
     char mode;
     cout << "--------MENU--------" << endl;
     cout << "1. Addition" << endl;
     cout << "2. Subtraction" << endl;
     cout << "3. Help" << endl;
-    cout << "c. Cosine(Only for vectors)" << endl;   // 向量的余弦值
-    cout << "m. Multiply(Only for Polyn)" << endl;   // 多项式乘法
-    cout << "d. Derivative(Only for Polyn)" << endl; // 多项式导数
+    if (cal == 'V')
+        cout << "c. Cosine(Only for vectors)" << endl; // 向量的余弦值
+    if (cal == 'P' || cal == 'M')
+        cout << "m. Multiply(Only for Polyn and Matrix)" << endl; // 多项式乘法
+    if (cal == 'P')
+        cout << "d. Derivative(Only for Polyn)" << endl; // 多项式导数
+    if (cal == 'M')
+    {
+        cout << "d. Determinant(Only for Matrix)" << endl; // 矩阵行列式
+        cout << "t. Transpose(Only for Matrix)" << endl;   // 矩阵转置
+        cout << "e. Eigenvalues(Only for Matrix)" << endl; // 矩阵特征值
+    }
     cout << "q. Exit" << endl;
     cout << "Please select an option: ";
     cin >> mode;
     return mode;
 }
 
+/*
+ * @brief 链表实现的多项式计算器的主函数
+ * @return 函数无返回值
+ */
 void Polyncalculator_ListNode()
 {
     cout << "-------------------" << endl;
     cout << "Welcome to PolynCalculator!" << endl;
     while (true)
     {
-        char mode = menu(); // 显示菜单并获取用户选择
+        char mode = menu('P'); // 显示菜单并获取用户选择
         switch (mode)
         {
         case '1': // 多项式加法
@@ -430,6 +586,94 @@ void Polyncalculator_ListNode()
         }
         }
     }
+}
+
+/*
+ * @brief 函数计算器的主函数
+ * @return 函数无返回值
+ */
+void FunctionCalculator()
+{
+    cout << "-------------------" << endl;
+    cout << "Welcome to FunctionCalculator!" << endl;
+    while (true)
+    {
+        char mode = FunctionMenu(); // 显示菜单并获取用户选择
+        switch (mode)
+        {
+        case '1': // 定义一个函数
+        {
+            Function *F = new Function();
+            functions[F->name] = F;
+            break;
+        }
+        case '2': // 通过给定自变量的值计算函数值
+        {
+            cout << "Please enter the function name: ";
+            string name;
+            cin >> name;
+            if (functions.find(name) == functions.end()) // 函数未定义
+            {
+                cout << "Function not defined!" << endl;
+            }
+            else
+            {
+                Function *F = functions[name];
+                F->calAndShowValue();
+            }
+            break;
+        }
+        case '3': // 查看所有已定义的函数
+        {
+            cout << "All defined functions: " << endl;
+            for (auto it = functions.begin(); it != functions.end(); it++)
+            {
+                Function *F = it->second;
+                F->showFunction();
+            }
+            break;
+        }
+        case '4': // 帮助信息
+        {
+            cout << "FunctionCalculator is a calculator for function calculations." << endl;
+            cout << "You can define functions and calculate with given variable values." << endl;
+            cout << "For more detail, please read our instructions." << endl;
+            break;
+        }
+        case 'q': // 退出程序
+        {
+            cout << "Exiting ScienceCalculator..." << endl;
+            for (auto it = functions.begin(); it != functions.end(); it++)
+            {
+                delete it->second;
+            }
+            return;
+        }
+        default: // 输入错误
+        {
+            cout << "Invalid input!" << endl;
+            break;
+        }
+        }
+    }
+}
+
+/*
+ * @brief 函数计算器的菜单函数
+ * @return char 选择的选项
+ */
+char FunctionMenu()
+{
+    char mode;
+    cout << "--------MENU--------" << endl;
+    cout << "1. Define a function" << endl;
+    cout << "2. Calculate function value with given independent variable values" << endl;
+    cout << "3. View all function defined" << endl;
+    cout << "4. Help" << endl;
+    cout << "q. Exit" << endl;
+    cout << "Please select an option: ";
+    cin >> mode;
+    return mode;
 }
 
 // Calculations.cpp

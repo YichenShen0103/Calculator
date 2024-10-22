@@ -4,6 +4,8 @@
 // Vector 类的声明
 class Vector
 {
+    friend class Matrix;
+
 private:
     int degree;                 // 维度
     double magnitude();         // 向量模长
@@ -12,6 +14,7 @@ private:
 public:
     int *coef;                       // 系数数组
     Vector(int N);                   // 构造函数
+    Vector(int N, int x);            // 构造函数，一般不调用，用于静默创建对象
     ~Vector();                       // 析构函数
     void printVector();              // 打印向量
     int VectorDegree();              // 向量的维度

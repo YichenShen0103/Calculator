@@ -10,7 +10,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "D:/code/vim/DataStr&Algr/Data Structures & Algorithms -- Calculators/src/Calculators.cpp" "CMakeFiles/Calculator.dir/src/Calculators.cpp.obj" "gcc" "CMakeFiles/Calculator.dir/src/Calculators.cpp.obj.d"
   "D:/code/vim/DataStr&Algr/Data Structures & Algorithms -- Calculators/src/Expression.cpp" "CMakeFiles/Calculator.dir/src/Expression.cpp.obj" "gcc" "CMakeFiles/Calculator.dir/src/Expression.cpp.obj.d"
+  "D:/code/vim/DataStr&Algr/Data Structures & Algorithms -- Calculators/src/Function.cpp" "CMakeFiles/Calculator.dir/src/Function.cpp.obj" "gcc" "CMakeFiles/Calculator.dir/src/Function.cpp.obj.d"
   "D:/code/vim/DataStr&Algr/Data Structures & Algorithms -- Calculators/src/ListNode.cpp" "CMakeFiles/Calculator.dir/src/ListNode.cpp.obj" "gcc" "CMakeFiles/Calculator.dir/src/ListNode.cpp.obj.d"
+  "D:/code/vim/DataStr&Algr/Data Structures & Algorithms -- Calculators/src/Matrix.cpp" "CMakeFiles/Calculator.dir/src/Matrix.cpp.obj" "gcc" "CMakeFiles/Calculator.dir/src/Matrix.cpp.obj.d"
   "D:/code/vim/DataStr&Algr/Data Structures & Algorithms -- Calculators/src/Polyn.cpp" "CMakeFiles/Calculator.dir/src/Polyn.cpp.obj" "gcc" "CMakeFiles/Calculator.dir/src/Polyn.cpp.obj.d"
   "D:/code/vim/DataStr&Algr/Data Structures & Algorithms -- Calculators/src/Vector.cpp" "CMakeFiles/Calculator.dir/src/Vector.cpp.obj" "gcc" "CMakeFiles/Calculator.dir/src/Vector.cpp.obj.d"
   "D:/code/vim/DataStr&Algr/Data Structures & Algorithms -- Calculators/src/main.cpp" "CMakeFiles/Calculator.dir/src/main.cpp.obj" "gcc" "CMakeFiles/Calculator.dir/src/main.cpp.obj.d"

@@ -98,11 +98,26 @@ CMakeFiles/Calculator.dir/src/Expression.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Calculator.dir/src/Expression.cpp.s"
 	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\code\vim\DataStr&Algr\Data Structures & Algorithms -- Calculators\src\Expression.cpp" -o CMakeFiles\Calculator.dir\src\Expression.cpp.s
 
+CMakeFiles/Calculator.dir/src/Function.cpp.obj: CMakeFiles/Calculator.dir/flags.make
+CMakeFiles/Calculator.dir/src/Function.cpp.obj: CMakeFiles/Calculator.dir/includes_CXX.rsp
+CMakeFiles/Calculator.dir/src/Function.cpp.obj: D:/code/vim/DataStr&Algr/Data\ Structures\ &\ Algorithms\ --\ Calculators/src/Function.cpp
+CMakeFiles/Calculator.dir/src/Function.cpp.obj: CMakeFiles/Calculator.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\code\vim\DataStr&Algr\Data Structures & Algorithms -- Calculators\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Calculator.dir/src/Function.cpp.obj"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Calculator.dir/src/Function.cpp.obj -MF CMakeFiles\Calculator.dir\src\Function.cpp.obj.d -o CMakeFiles\Calculator.dir\src\Function.cpp.obj -c "D:\code\vim\DataStr&Algr\Data Structures & Algorithms -- Calculators\src\Function.cpp"
+
+CMakeFiles/Calculator.dir/src/Function.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Calculator.dir/src/Function.cpp.i"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\code\vim\DataStr&Algr\Data Structures & Algorithms -- Calculators\src\Function.cpp" > CMakeFiles\Calculator.dir\src\Function.cpp.i
+
+CMakeFiles/Calculator.dir/src/Function.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Calculator.dir/src/Function.cpp.s"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\code\vim\DataStr&Algr\Data Structures & Algorithms -- Calculators\src\Function.cpp" -o CMakeFiles\Calculator.dir\src\Function.cpp.s
+
 CMakeFiles/Calculator.dir/src/ListNode.cpp.obj: CMakeFiles/Calculator.dir/flags.make
 CMakeFiles/Calculator.dir/src/ListNode.cpp.obj: CMakeFiles/Calculator.dir/includes_CXX.rsp
 CMakeFiles/Calculator.dir/src/ListNode.cpp.obj: D:/code/vim/DataStr&Algr/Data\ Structures\ &\ Algorithms\ --\ Calculators/src/ListNode.cpp
 CMakeFiles/Calculator.dir/src/ListNode.cpp.obj: CMakeFiles/Calculator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\code\vim\DataStr&Algr\Data Structures & Algorithms -- Calculators\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Calculator.dir/src/ListNode.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\code\vim\DataStr&Algr\Data Structures & Algorithms -- Calculators\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Calculator.dir/src/ListNode.cpp.obj"
 	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Calculator.dir/src/ListNode.cpp.obj -MF CMakeFiles\Calculator.dir\src\ListNode.cpp.obj.d -o CMakeFiles\Calculator.dir\src\ListNode.cpp.obj -c "D:\code\vim\DataStr&Algr\Data Structures & Algorithms -- Calculators\src\ListNode.cpp"
 
 CMakeFiles/Calculator.dir/src/ListNode.cpp.i: cmake_force
@@ -113,11 +128,26 @@ CMakeFiles/Calculator.dir/src/ListNode.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Calculator.dir/src/ListNode.cpp.s"
 	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\code\vim\DataStr&Algr\Data Structures & Algorithms -- Calculators\src\ListNode.cpp" -o CMakeFiles\Calculator.dir\src\ListNode.cpp.s
 
+CMakeFiles/Calculator.dir/src/Matrix.cpp.obj: CMakeFiles/Calculator.dir/flags.make
+CMakeFiles/Calculator.dir/src/Matrix.cpp.obj: CMakeFiles/Calculator.dir/includes_CXX.rsp
+CMakeFiles/Calculator.dir/src/Matrix.cpp.obj: D:/code/vim/DataStr&Algr/Data\ Structures\ &\ Algorithms\ --\ Calculators/src/Matrix.cpp
+CMakeFiles/Calculator.dir/src/Matrix.cpp.obj: CMakeFiles/Calculator.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\code\vim\DataStr&Algr\Data Structures & Algorithms -- Calculators\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Calculator.dir/src/Matrix.cpp.obj"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Calculator.dir/src/Matrix.cpp.obj -MF CMakeFiles\Calculator.dir\src\Matrix.cpp.obj.d -o CMakeFiles\Calculator.dir\src\Matrix.cpp.obj -c "D:\code\vim\DataStr&Algr\Data Structures & Algorithms -- Calculators\src\Matrix.cpp"
+
+CMakeFiles/Calculator.dir/src/Matrix.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Calculator.dir/src/Matrix.cpp.i"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\code\vim\DataStr&Algr\Data Structures & Algorithms -- Calculators\src\Matrix.cpp" > CMakeFiles\Calculator.dir\src\Matrix.cpp.i
+
+CMakeFiles/Calculator.dir/src/Matrix.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Calculator.dir/src/Matrix.cpp.s"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\code\vim\DataStr&Algr\Data Structures & Algorithms -- Calculators\src\Matrix.cpp" -o CMakeFiles\Calculator.dir\src\Matrix.cpp.s
+
 CMakeFiles/Calculator.dir/src/Polyn.cpp.obj: CMakeFiles/Calculator.dir/flags.make
 CMakeFiles/Calculator.dir/src/Polyn.cpp.obj: CMakeFiles/Calculator.dir/includes_CXX.rsp
 CMakeFiles/Calculator.dir/src/Polyn.cpp.obj: D:/code/vim/DataStr&Algr/Data\ Structures\ &\ Algorithms\ --\ Calculators/src/Polyn.cpp
 CMakeFiles/Calculator.dir/src/Polyn.cpp.obj: CMakeFiles/Calculator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\code\vim\DataStr&Algr\Data Structures & Algorithms -- Calculators\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Calculator.dir/src/Polyn.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\code\vim\DataStr&Algr\Data Structures & Algorithms -- Calculators\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Calculator.dir/src/Polyn.cpp.obj"
 	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Calculator.dir/src/Polyn.cpp.obj -MF CMakeFiles\Calculator.dir\src\Polyn.cpp.obj.d -o CMakeFiles\Calculator.dir\src\Polyn.cpp.obj -c "D:\code\vim\DataStr&Algr\Data Structures & Algorithms -- Calculators\src\Polyn.cpp"
 
 CMakeFiles/Calculator.dir/src/Polyn.cpp.i: cmake_force
@@ -132,7 +162,7 @@ CMakeFiles/Calculator.dir/src/Vector.cpp.obj: CMakeFiles/Calculator.dir/flags.ma
 CMakeFiles/Calculator.dir/src/Vector.cpp.obj: CMakeFiles/Calculator.dir/includes_CXX.rsp
 CMakeFiles/Calculator.dir/src/Vector.cpp.obj: D:/code/vim/DataStr&Algr/Data\ Structures\ &\ Algorithms\ --\ Calculators/src/Vector.cpp
 CMakeFiles/Calculator.dir/src/Vector.cpp.obj: CMakeFiles/Calculator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\code\vim\DataStr&Algr\Data Structures & Algorithms -- Calculators\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Calculator.dir/src/Vector.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\code\vim\DataStr&Algr\Data Structures & Algorithms -- Calculators\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Calculator.dir/src/Vector.cpp.obj"
 	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Calculator.dir/src/Vector.cpp.obj -MF CMakeFiles\Calculator.dir\src\Vector.cpp.obj.d -o CMakeFiles\Calculator.dir\src\Vector.cpp.obj -c "D:\code\vim\DataStr&Algr\Data Structures & Algorithms -- Calculators\src\Vector.cpp"
 
 CMakeFiles/Calculator.dir/src/Vector.cpp.i: cmake_force
@@ -147,7 +177,7 @@ CMakeFiles/Calculator.dir/src/main.cpp.obj: CMakeFiles/Calculator.dir/flags.make
 CMakeFiles/Calculator.dir/src/main.cpp.obj: CMakeFiles/Calculator.dir/includes_CXX.rsp
 CMakeFiles/Calculator.dir/src/main.cpp.obj: D:/code/vim/DataStr&Algr/Data\ Structures\ &\ Algorithms\ --\ Calculators/src/main.cpp
 CMakeFiles/Calculator.dir/src/main.cpp.obj: CMakeFiles/Calculator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\code\vim\DataStr&Algr\Data Structures & Algorithms -- Calculators\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Calculator.dir/src/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\code\vim\DataStr&Algr\Data Structures & Algorithms -- Calculators\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Calculator.dir/src/main.cpp.obj"
 	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Calculator.dir/src/main.cpp.obj -MF CMakeFiles\Calculator.dir\src\main.cpp.obj.d -o CMakeFiles\Calculator.dir\src\main.cpp.obj -c "D:\code\vim\DataStr&Algr\Data Structures & Algorithms -- Calculators\src\main.cpp"
 
 CMakeFiles/Calculator.dir/src/main.cpp.i: cmake_force
@@ -162,7 +192,9 @@ CMakeFiles/Calculator.dir/src/main.cpp.s: cmake_force
 Calculator_OBJECTS = \
 "CMakeFiles/Calculator.dir/src/Calculators.cpp.obj" \
 "CMakeFiles/Calculator.dir/src/Expression.cpp.obj" \
+"CMakeFiles/Calculator.dir/src/Function.cpp.obj" \
 "CMakeFiles/Calculator.dir/src/ListNode.cpp.obj" \
+"CMakeFiles/Calculator.dir/src/Matrix.cpp.obj" \
 "CMakeFiles/Calculator.dir/src/Polyn.cpp.obj" \
 "CMakeFiles/Calculator.dir/src/Vector.cpp.obj" \
 "CMakeFiles/Calculator.dir/src/main.cpp.obj"
@@ -172,7 +204,9 @@ Calculator_EXTERNAL_OBJECTS =
 
 D:/code/vim/DataStr&Algr/Data\ Structures\ &\ Algorithms\ --\ Calculators/bin/Calculator.exe: CMakeFiles/Calculator.dir/src/Calculators.cpp.obj
 D:/code/vim/DataStr&Algr/Data\ Structures\ &\ Algorithms\ --\ Calculators/bin/Calculator.exe: CMakeFiles/Calculator.dir/src/Expression.cpp.obj
+D:/code/vim/DataStr&Algr/Data\ Structures\ &\ Algorithms\ --\ Calculators/bin/Calculator.exe: CMakeFiles/Calculator.dir/src/Function.cpp.obj
 D:/code/vim/DataStr&Algr/Data\ Structures\ &\ Algorithms\ --\ Calculators/bin/Calculator.exe: CMakeFiles/Calculator.dir/src/ListNode.cpp.obj
+D:/code/vim/DataStr&Algr/Data\ Structures\ &\ Algorithms\ --\ Calculators/bin/Calculator.exe: CMakeFiles/Calculator.dir/src/Matrix.cpp.obj
 D:/code/vim/DataStr&Algr/Data\ Structures\ &\ Algorithms\ --\ Calculators/bin/Calculator.exe: CMakeFiles/Calculator.dir/src/Polyn.cpp.obj
 D:/code/vim/DataStr&Algr/Data\ Structures\ &\ Algorithms\ --\ Calculators/bin/Calculator.exe: CMakeFiles/Calculator.dir/src/Vector.cpp.obj
 D:/code/vim/DataStr&Algr/Data\ Structures\ &\ Algorithms\ --\ Calculators/bin/Calculator.exe: CMakeFiles/Calculator.dir/src/main.cpp.obj
@@ -180,7 +214,7 @@ D:/code/vim/DataStr&Algr/Data\ Structures\ &\ Algorithms\ --\ Calculators/bin/Ca
 D:/code/vim/DataStr&Algr/Data\ Structures\ &\ Algorithms\ --\ Calculators/bin/Calculator.exe: CMakeFiles/Calculator.dir/linkLibs.rsp
 D:/code/vim/DataStr&Algr/Data\ Structures\ &\ Algorithms\ --\ Calculators/bin/Calculator.exe: CMakeFiles/Calculator.dir/objects1.rsp
 D:/code/vim/DataStr&Algr/Data\ Structures\ &\ Algorithms\ --\ Calculators/bin/Calculator.exe: CMakeFiles/Calculator.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="D:\code\vim\DataStr&Algr\Data Structures & Algorithms -- Calculators\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable \"D:\code\vim\DataStr&Algr\Data Structures & Algorithms -- Calculators\bin\Calculator.exe\""
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="D:\code\vim\DataStr&Algr\Data Structures & Algorithms -- Calculators\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable \"D:\code\vim\DataStr&Algr\Data Structures & Algorithms -- Calculators\bin\Calculator.exe\""
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Calculator.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

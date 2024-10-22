@@ -69,6 +69,12 @@ void Vector::addVector(Vector *V2)
     V2 = nullptr; // 释放V2内存空间
 }
 
+Vector::Vector(int N, int x)
+{
+    coef = new int[N]; // 为向量分配内存空间
+    degree = N;        // 向量的维度
+}
+
 /*
  * @brief 向量减法
  * @param V2 另一个向量

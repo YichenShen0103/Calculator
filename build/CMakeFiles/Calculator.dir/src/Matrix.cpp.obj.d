@@ -1,6 +1,7 @@
-CMakeFiles/Calculator.dir/src/Expression.cpp.obj: \
- D:\code\vim\DataStr&Algr\Data\ Structures\ &\ Algorithms\ --\ Calculators\src\Expression.cpp \
- D:/code/vim/DATAST~1/DATAST~1/include/Expression.h \
+CMakeFiles/Calculator.dir/src/Matrix.cpp.obj: \
+ D:\code\vim\DataStr&Algr\Data\ Structures\ &\ Algorithms\ --\ Calculators\src\Matrix.cpp \
+ D:/code/vim/DATAST~1/DATAST~1/include/Matrix.h \
+ D:/code/vim/DATAST~1/DATAST~1/include/Vector.h \
  D:/msys64/mingw64/include/c++/14.2.0/vector \
  D:/msys64/mingw64/include/c++/14.2.0/bits/requires_hosted.h \
  D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h \
@@ -61,34 +62,12 @@ CMakeFiles/Calculator.dir/src/Expression.cpp.obj: \
  D:/msys64/mingw64/include/c++/14.2.0/bits/uses_allocator.h \
  D:/msys64/mingw64/include/c++/14.2.0/bits/uses_allocator_args.h \
  D:/msys64/mingw64/include/c++/14.2.0/tuple \
- D:/msys64/mingw64/include/c++/14.2.0/string \
- D:/msys64/mingw64/include/c++/14.2.0/bits/stringfwd.h \
- D:/msys64/mingw64/include/c++/14.2.0/bits/char_traits.h \
- D:/msys64/mingw64/include/c++/14.2.0/bits/postypes.h \
- D:/msys64/mingw64/include/c++/14.2.0/cwchar \
- D:/msys64/mingw64/include/wchar.h \
- D:/msys64/mingw64/include/corecrt_stdio_config.h \
- D:/msys64/mingw64/include/corecrt_wstdlib.h \
- D:/msys64/mingw64/include/_mingw_off_t.h \
- D:/msys64/mingw64/include/_mingw_stat64.h \
- D:/msys64/mingw64/include/swprintf.inl \
- D:/msys64/mingw64/include/sec_api/wchar_s.h \
- D:/msys64/mingw64/include/c++/14.2.0/bits/localefwd.h \
- D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++locale.h \
- D:/msys64/mingw64/include/c++/14.2.0/clocale \
- D:/msys64/mingw64/include/locale.h D:/msys64/mingw64/include/stdio.h \
- D:/msys64/mingw64/include/sec_api/stdio_s.h \
- D:/msys64/mingw64/include/c++/14.2.0/iosfwd \
- D:/msys64/mingw64/include/c++/14.2.0/cctype \
- D:/msys64/mingw64/include/ctype.h \
- D:/msys64/mingw64/include/c++/14.2.0/bits/ostream_insert.h \
- D:/msys64/mingw64/include/c++/14.2.0/bits/cxxabi_forced.h \
- D:/msys64/mingw64/include/c++/14.2.0/bits/basic_string.h \
- D:/msys64/mingw64/include/c++/14.2.0/string_view \
- D:/msys64/mingw64/include/c++/14.2.0/bits/string_view.tcc \
- D:/msys64/mingw64/include/c++/14.2.0/ext/string_conversions.h \
- D:/msys64/mingw64/include/c++/14.2.0/cstdlib \
+ D:/code/vim/DATAST~1/DATAST~1/include/Vector.h \
+ D:/msys64/mingw64/include/c++/14.2.0/cmath \
+ D:/msys64/mingw64/include/math.h \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/std_abs.h \
  D:/msys64/mingw64/include/stdlib.h \
+ D:/msys64/mingw64/include/corecrt_wstdlib.h \
  D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/limits.h \
  D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/syslimits.h \
  D:/msys64/mingw64/include/limits.h \
@@ -97,21 +76,6 @@ CMakeFiles/Calculator.dir/src/Expression.cpp.obj: \
  D:/msys64/mingw64/include/malloc.h \
  D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/mm_malloc.h \
  D:/msys64/mingw64/include/errno.h \
- D:/msys64/mingw64/include/c++/14.2.0/bits/std_abs.h \
- D:/msys64/mingw64/include/c++/14.2.0/cstdio \
- D:/msys64/mingw64/include/c++/14.2.0/cerrno \
- D:/msys64/mingw64/include/c++/14.2.0/bits/charconv.h \
- D:/msys64/mingw64/include/c++/14.2.0/bits/basic_string.tcc \
- D:/msys64/mingw64/include/c++/14.2.0/unordered_map \
- D:/msys64/mingw64/include/c++/14.2.0/bits/unordered_map.h \
- D:/msys64/mingw64/include/c++/14.2.0/bits/hashtable.h \
- D:/msys64/mingw64/include/c++/14.2.0/bits/hashtable_policy.h \
- D:/msys64/mingw64/include/c++/14.2.0/ext/aligned_buffer.h \
- D:/msys64/mingw64/include/c++/14.2.0/bits/enable_special_members.h \
- D:/msys64/mingw64/include/c++/14.2.0/bits/node_handle.h \
- D:/msys64/mingw64/include/c++/14.2.0/bits/erase_if.h \
- D:/msys64/mingw64/include/c++/14.2.0/cmath \
- D:/msys64/mingw64/include/math.h \
  D:/msys64/mingw64/include/c++/14.2.0/bits/specfun.h \
  D:/msys64/mingw64/include/c++/14.2.0/limits \
  D:/msys64/mingw64/include/c++/14.2.0/tr1/gamma.tcc \
@@ -126,14 +90,39 @@ CMakeFiles/Calculator.dir/src/Expression.cpp.obj: \
  D:/msys64/mingw64/include/c++/14.2.0/tr1/poly_hermite.tcc \
  D:/msys64/mingw64/include/c++/14.2.0/tr1/poly_laguerre.tcc \
  D:/msys64/mingw64/include/c++/14.2.0/tr1/riemann_zeta.tcc \
+ D:/msys64/mingw64/include/c++/14.2.0/map \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/stl_tree.h \
+ D:/msys64/mingw64/include/c++/14.2.0/ext/aligned_buffer.h \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/node_handle.h \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/stl_map.h \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/stl_multimap.h \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/erase_if.h \
  D:/msys64/mingw64/include/c++/14.2.0/iostream \
  D:/msys64/mingw64/include/c++/14.2.0/ostream \
  D:/msys64/mingw64/include/c++/14.2.0/ios \
+ D:/msys64/mingw64/include/c++/14.2.0/iosfwd \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/stringfwd.h \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/postypes.h \
+ D:/msys64/mingw64/include/c++/14.2.0/cwchar \
+ D:/msys64/mingw64/include/wchar.h \
+ D:/msys64/mingw64/include/corecrt_stdio_config.h \
+ D:/msys64/mingw64/include/_mingw_off_t.h \
+ D:/msys64/mingw64/include/_mingw_stat64.h \
+ D:/msys64/mingw64/include/swprintf.inl \
+ D:/msys64/mingw64/include/sec_api/wchar_s.h \
  D:/msys64/mingw64/include/c++/14.2.0/exception \
  D:/msys64/mingw64/include/c++/14.2.0/bits/exception_ptr.h \
  D:/msys64/mingw64/include/c++/14.2.0/bits/cxxabi_init_exception.h \
  D:/msys64/mingw64/include/c++/14.2.0/typeinfo \
  D:/msys64/mingw64/include/c++/14.2.0/bits/nested_exception.h \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/char_traits.h \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/localefwd.h \
+ D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++locale.h \
+ D:/msys64/mingw64/include/c++/14.2.0/clocale \
+ D:/msys64/mingw64/include/locale.h D:/msys64/mingw64/include/stdio.h \
+ D:/msys64/mingw64/include/sec_api/stdio_s.h \
+ D:/msys64/mingw64/include/c++/14.2.0/cctype \
+ D:/msys64/mingw64/include/ctype.h \
  D:/msys64/mingw64/include/c++/14.2.0/bits/ios_base.h \
  D:/msys64/mingw64/include/c++/14.2.0/ext/atomicity.h \
  D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/gthr.h \
@@ -152,6 +141,18 @@ CMakeFiles/Calculator.dir/src/Expression.cpp.obj: \
  D:/msys64/mingw64/include/pthread_unistd.h \
  D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/atomic_word.h \
  D:/msys64/mingw64/include/c++/14.2.0/bits/locale_classes.h \
+ D:/msys64/mingw64/include/c++/14.2.0/string \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/ostream_insert.h \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/cxxabi_forced.h \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/basic_string.h \
+ D:/msys64/mingw64/include/c++/14.2.0/string_view \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/string_view.tcc \
+ D:/msys64/mingw64/include/c++/14.2.0/ext/string_conversions.h \
+ D:/msys64/mingw64/include/c++/14.2.0/cstdlib \
+ D:/msys64/mingw64/include/c++/14.2.0/cstdio \
+ D:/msys64/mingw64/include/c++/14.2.0/cerrno \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/charconv.h \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/basic_string.tcc \
  D:/msys64/mingw64/include/c++/14.2.0/bits/locale_classes.tcc \
  D:/msys64/mingw64/include/c++/14.2.0/system_error \
  D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/error_constants.h \
@@ -169,13 +170,4 @@ CMakeFiles/Calculator.dir/src/Expression.cpp.obj: \
  D:/msys64/mingw64/include/c++/14.2.0/bits/basic_ios.tcc \
  D:/msys64/mingw64/include/c++/14.2.0/bits/ostream.tcc \
  D:/msys64/mingw64/include/c++/14.2.0/istream \
- D:/msys64/mingw64/include/c++/14.2.0/bits/istream.tcc \
- D:/msys64/mingw64/include/c++/14.2.0/set \
- D:/msys64/mingw64/include/c++/14.2.0/bits/stl_tree.h \
- D:/msys64/mingw64/include/c++/14.2.0/bits/stl_set.h \
- D:/msys64/mingw64/include/c++/14.2.0/bits/stl_multiset.h \
- D:/msys64/mingw64/include/c++/14.2.0/stack \
- D:/msys64/mingw64/include/c++/14.2.0/deque \
- D:/msys64/mingw64/include/c++/14.2.0/bits/stl_deque.h \
- D:/msys64/mingw64/include/c++/14.2.0/bits/deque.tcc \
- D:/msys64/mingw64/include/c++/14.2.0/bits/stl_stack.h
+ D:/msys64/mingw64/include/c++/14.2.0/bits/istream.tcc

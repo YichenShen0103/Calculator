@@ -10,16 +10,45 @@
 using namespace std;
 
 /*
+ * @brief 判断表达式中的e是否为科学计数法的一部分
+ * @param string expr 表达式字符串
+ * @param int index e所在的位置
+ * @return bool 是否为科学计数法的一部分
+ */
+bool isScitificNotation(string expr, int index)
+{
+    if (expr[index] != 'e')
+        return false; // e 不是科学计数法的一部分
+
+    if (index == 0)
+        return true; // 表达式开头，则不是科学计数法的一部分
+
+    index--;
+    while (index >= 0)
+    {
+        char ch = expr[index];
+        if (ch == '.' || ch == '+' || ch == '-' || ch == '/' || ch == '*' || ch == '^' || ch == '(' || ch == ')')
+            return true; // 遇到操作符或括号，则是科学计数法的一部分
+        if (isalpha(ch))
+            return false; // 遇到字母，则不是科学计数法的一部分
+        index--;
+    }
+    return true; // 遍历到表达式开头均为数字，则是科学计数法的一部分
+}
+
+/*
  * @brief 计算操作符的优先级
  * @param char op 操作
  * @return int 优先级
  */
 int precedence(char op)
 {
+    if (op == '^')
+        return 3; // 幂运算的优先级最高
     if (op == '+' || op == '-')
         return 1; // 加减法的优先级次低
     if (op == '*' || op == '/')
-        return 2; // 乘除法的优先级最高
+        return 2; // 乘除法的优先级次高
     return 0;     // 其他操作符的优先级最低
 }
 
@@ -39,8 +68,11 @@ void Expression::infixToPostfix()
         // 如果当前字符是一个数字或字母（操作数），直接添加到后缀表达式中
         if (isdigit(ch))
         {
-            while (i < expr.length() && (isdigit(expr[i]) || expr[i] == '.'))
+            bool singleE = true; // 指示是否只有一个 e
+            while (i < expr.length() && (isdigit(expr[i]) || expr[i] == '.' || (expr[i] == 'e' && singleE)))
             {
+                if (expr[i] == 'e')
+                    singleE = false;
                 postfix += expr[i];
                 i++;
             }
@@ -125,6 +157,9 @@ Expression::Expression()
         char ch = expr[i];
         if (isalpha(ch))
         {
+            if (ch == 'e' && isScitificNotation(expr, i)) // 处理 e
+                continue;                                 // 科学计数法跳过
+
             string var = "";
             while (i < expr.length() && (isalpha(expr[i]) || isdigit(expr[i]) || expr[i] == '_'))
             {
@@ -135,10 +170,12 @@ Expression::Expression()
             i--;                   // 回退一步，因为当前字符已经处理过了
         }
     }
-    varList = vector<string>(variables.begin(), variables.end()); // 变量列表
-    varNum = variables.size();                                    // 变量个数
-    isPostFix = false;                                            // 表达式是否为后缀表达式
-    varVal = vector<double>(varNum, NAN);                         // 变量值初始化为 NAN
+    for (auto var : variables)
+    {
+        varMap[var] = NAN; // 变量值初始化为 NAN
+    }
+    varNum = variables.size(); // 变量个数
+    isPostFix = false;         // 表达式是否为后缀表达式
 }
 
 /*
@@ -186,6 +223,23 @@ double Expression::calculate()
                 }
                 i++;
             }
+            if (expr[i] == 'e') // 处理指数
+            {
+                i++;
+                int exp = 0;
+                int sign = 1;
+                if (i < expr.size() && expr[i] == '-')
+                {
+                    sign = -1;
+                    i++;
+                }
+                while (i < expr.size() && isdigit(expr[i]))
+                {
+                    exp = exp * 10 + (expr[i] - '0');
+                    i++;
+                }
+                num *= pow(10, exp) * sign; // 乘以 10 的指数次方
+            }
             sta[top++] = num; // 入栈
             i--;              // 回退一步
         }
@@ -200,20 +254,7 @@ double Expression::calculate()
             }
             i--; // 回退一步，因为当前字符已经处理过了
 
-            for (int j = 0; j < varNum; j++)
-            {
-                if (var == varList[j])
-                {
-                    index = j; // 找到变量索引
-                    break;
-                }
-            }
-            if (index == -1 || isnan(varVal[index]))
-            {
-                cout << "Error: Undefined or unassigned variable" << endl; // 变量未定义或未赋值
-                return NAN;
-            }
-            sta[top++] = varVal[index];
+            sta[top++] = varMap[var];
         }
         else if (expr[i] == '-') // 处理负号
         {
@@ -260,6 +301,9 @@ double Expression::calculate()
                 }
                 sta[top++] = op1 / op2;
                 break;
+            case '^':
+                sta[top++] = pow(op1, op2);
+                break;
             default:
                 cout << "Error: Invalid operator" << endl; // 非法操作符
                 return NAN;
@@ -286,15 +330,7 @@ double Expression::calculate()
  */
 void Expression::varAssign(string var, double val)
 {
-    for (int i = 0; i < varNum; i++)
-    {
-        if (var == varList[i])
-        {
-            varVal[i] = val; // 找到变量，赋值
-            return;
-        }
-    }
-    cout << "Error: Undefined variable" << endl; // 变量未定义
+    varMap[var] = val; // 变量赋值
 }
 
 /*
@@ -317,8 +353,7 @@ Expression::Expression(const Expression &E)
     expr = E.expr;
     isPostFix = E.isPostFix;
     varNum = E.varNum;
-    varList = E.varList;
-    varVal = E.varVal;
+    varMap = E.varMap;
 }
 
 /*

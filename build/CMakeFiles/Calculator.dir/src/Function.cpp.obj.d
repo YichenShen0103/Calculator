@@ -1,5 +1,6 @@
-CMakeFiles/Calculator.dir/src/Expression.cpp.obj: \
- D:\code\vim\DataStr&Algr\Data\ Structures\ &\ Algorithms\ --\ Calculators\src\Expression.cpp \
+CMakeFiles/Calculator.dir/src/Function.cpp.obj: \
+ D:\code\vim\DataStr&Algr\Data\ Structures\ &\ Algorithms\ --\ Calculators\src\Function.cpp \
+ D:/code/vim/DATAST~1/DATAST~1/include/Function.h \
  D:/code/vim/DATAST~1/DATAST~1/include/Expression.h \
  D:/msys64/mingw64/include/c++/14.2.0/vector \
  D:/msys64/mingw64/include/c++/14.2.0/bits/requires_hosted.h \
@@ -110,22 +111,6 @@ CMakeFiles/Calculator.dir/src/Expression.cpp.obj: \
  D:/msys64/mingw64/include/c++/14.2.0/bits/enable_special_members.h \
  D:/msys64/mingw64/include/c++/14.2.0/bits/node_handle.h \
  D:/msys64/mingw64/include/c++/14.2.0/bits/erase_if.h \
- D:/msys64/mingw64/include/c++/14.2.0/cmath \
- D:/msys64/mingw64/include/math.h \
- D:/msys64/mingw64/include/c++/14.2.0/bits/specfun.h \
- D:/msys64/mingw64/include/c++/14.2.0/limits \
- D:/msys64/mingw64/include/c++/14.2.0/tr1/gamma.tcc \
- D:/msys64/mingw64/include/c++/14.2.0/tr1/special_function_util.h \
- D:/msys64/mingw64/include/c++/14.2.0/tr1/bessel_function.tcc \
- D:/msys64/mingw64/include/c++/14.2.0/tr1/beta_function.tcc \
- D:/msys64/mingw64/include/c++/14.2.0/tr1/ell_integral.tcc \
- D:/msys64/mingw64/include/c++/14.2.0/tr1/exp_integral.tcc \
- D:/msys64/mingw64/include/c++/14.2.0/tr1/hypergeometric.tcc \
- D:/msys64/mingw64/include/c++/14.2.0/tr1/legendre_function.tcc \
- D:/msys64/mingw64/include/c++/14.2.0/tr1/modified_bessel_func.tcc \
- D:/msys64/mingw64/include/c++/14.2.0/tr1/poly_hermite.tcc \
- D:/msys64/mingw64/include/c++/14.2.0/tr1/poly_laguerre.tcc \
- D:/msys64/mingw64/include/c++/14.2.0/tr1/riemann_zeta.tcc \
  D:/msys64/mingw64/include/c++/14.2.0/iostream \
  D:/msys64/mingw64/include/c++/14.2.0/ostream \
  D:/msys64/mingw64/include/c++/14.2.0/ios \
@@ -170,12 +155,19 @@ CMakeFiles/Calculator.dir/src/Expression.cpp.obj: \
  D:/msys64/mingw64/include/c++/14.2.0/bits/ostream.tcc \
  D:/msys64/mingw64/include/c++/14.2.0/istream \
  D:/msys64/mingw64/include/c++/14.2.0/bits/istream.tcc \
- D:/msys64/mingw64/include/c++/14.2.0/set \
- D:/msys64/mingw64/include/c++/14.2.0/bits/stl_tree.h \
- D:/msys64/mingw64/include/c++/14.2.0/bits/stl_set.h \
- D:/msys64/mingw64/include/c++/14.2.0/bits/stl_multiset.h \
- D:/msys64/mingw64/include/c++/14.2.0/stack \
- D:/msys64/mingw64/include/c++/14.2.0/deque \
- D:/msys64/mingw64/include/c++/14.2.0/bits/stl_deque.h \
- D:/msys64/mingw64/include/c++/14.2.0/bits/deque.tcc \
- D:/msys64/mingw64/include/c++/14.2.0/bits/stl_stack.h
+ D:/msys64/mingw64/include/c++/14.2.0/cmath \
+ D:/msys64/mingw64/include/math.h \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/specfun.h \
+ D:/msys64/mingw64/include/c++/14.2.0/limits \
+ D:/msys64/mingw64/include/c++/14.2.0/tr1/gamma.tcc \
+ D:/msys64/mingw64/include/c++/14.2.0/tr1/special_function_util.h \
+ D:/msys64/mingw64/include/c++/14.2.0/tr1/bessel_function.tcc \
+ D:/msys64/mingw64/include/c++/14.2.0/tr1/beta_function.tcc \
+ D:/msys64/mingw64/include/c++/14.2.0/tr1/ell_integral.tcc \
+ D:/msys64/mingw64/include/c++/14.2.0/tr1/exp_integral.tcc \
+ D:/msys64/mingw64/include/c++/14.2.0/tr1/hypergeometric.tcc \
+ D:/msys64/mingw64/include/c++/14.2.0/tr1/legendre_function.tcc \
+ D:/msys64/mingw64/include/c++/14.2.0/tr1/modified_bessel_func.tcc \
+ D:/msys64/mingw64/include/c++/14.2.0/tr1/poly_hermite.tcc \
+ D:/msys64/mingw64/include/c++/14.2.0/tr1/poly_laguerre.tcc \
+ D:/msys64/mingw64/include/c++/14.2.0/tr1/riemann_zeta.tcc

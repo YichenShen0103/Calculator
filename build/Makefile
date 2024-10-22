@@ -176,6 +176,30 @@ src/Expression.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Calculator.dir\build.make CMakeFiles/Calculator.dir/src/Expression.cpp.s
 .PHONY : src/Expression.cpp.s
 
+src/Function.obj: src/Function.cpp.obj
+.PHONY : src/Function.obj
+
+# target to build an object file
+src/Function.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Calculator.dir\build.make CMakeFiles/Calculator.dir/src/Function.cpp.obj
+.PHONY : src/Function.cpp.obj
+
+src/Function.i: src/Function.cpp.i
+.PHONY : src/Function.i
+
+# target to preprocess a source file
+src/Function.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Calculator.dir\build.make CMakeFiles/Calculator.dir/src/Function.cpp.i
+.PHONY : src/Function.cpp.i
+
+src/Function.s: src/Function.cpp.s
+.PHONY : src/Function.s
+
+# target to generate assembly for a file
+src/Function.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Calculator.dir\build.make CMakeFiles/Calculator.dir/src/Function.cpp.s
+.PHONY : src/Function.cpp.s
+
 src/ListNode.obj: src/ListNode.cpp.obj
 .PHONY : src/ListNode.obj
 
@@ -199,6 +223,30 @@ src/ListNode.s: src/ListNode.cpp.s
 src/ListNode.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Calculator.dir\build.make CMakeFiles/Calculator.dir/src/ListNode.cpp.s
 .PHONY : src/ListNode.cpp.s
+
+src/Matrix.obj: src/Matrix.cpp.obj
+.PHONY : src/Matrix.obj
+
+# target to build an object file
+src/Matrix.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Calculator.dir\build.make CMakeFiles/Calculator.dir/src/Matrix.cpp.obj
+.PHONY : src/Matrix.cpp.obj
+
+src/Matrix.i: src/Matrix.cpp.i
+.PHONY : src/Matrix.i
+
+# target to preprocess a source file
+src/Matrix.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Calculator.dir\build.make CMakeFiles/Calculator.dir/src/Matrix.cpp.i
+.PHONY : src/Matrix.cpp.i
+
+src/Matrix.s: src/Matrix.cpp.s
+.PHONY : src/Matrix.s
+
+# target to generate assembly for a file
+src/Matrix.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Calculator.dir\build.make CMakeFiles/Calculator.dir/src/Matrix.cpp.s
+.PHONY : src/Matrix.cpp.s
 
 src/Polyn.obj: src/Polyn.cpp.obj
 .PHONY : src/Polyn.obj
@@ -287,9 +335,15 @@ help:
 	@echo ... src/Expression.obj
 	@echo ... src/Expression.i
 	@echo ... src/Expression.s
+	@echo ... src/Function.obj
+	@echo ... src/Function.i
+	@echo ... src/Function.s
 	@echo ... src/ListNode.obj
 	@echo ... src/ListNode.i
 	@echo ... src/ListNode.s
+	@echo ... src/Matrix.obj
+	@echo ... src/Matrix.i
+	@echo ... src/Matrix.s
 	@echo ... src/Polyn.obj
 	@echo ... src/Polyn.i
 	@echo ... src/Polyn.s
