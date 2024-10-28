@@ -81,13 +81,29 @@ void Expression::infixToPostfix()
         }
         else if (isalpha(ch) || ch == '_')
         {
-            while (i < expr.length() && (isalpha(expr[i]) || isdigit(expr[i]) || expr[i] == '_'))
+            while (i < expr.length() && (isalpha(expr[i]) || isdigit(expr[i]) || expr[i] == '_' ||
+                                         expr[i] == '(' || expr[i] == ')'))
             {
+                if (expr[i] == '(')
+                {
+                    postfix += expr[i];
+                    i++;
+                    int level = 0;
+                    while (i < expr.length() && expr[i] != ')' && !level)
+                    {
+                        if (expr[i] == '(')
+                            level++;
+                        else if (expr[i] == ')')
+                            level--;
+                        postfix += expr[i];
+                        i++;
+                    }
+                }
                 postfix += expr[i];
                 i++;
             }
             postfix += ' '; // 加上空格，以区分字母和操作符
-            i--;            // 回退一步，因为当前字符已经处理过了
+            --i;            // 回退一步，因为当前字符已经处理过了
         }
         else if (ch == '(')
         {
@@ -161,13 +177,40 @@ Expression::Expression()
                 continue;                                 // 科学计数法跳过
 
             string var = "";
-            while (i < expr.length() && (isalpha(expr[i]) || isdigit(expr[i]) || expr[i] == '_'))
+            while (i < expr.length() && (isalpha(expr[i]) || isdigit(expr[i]) || expr[i] == '_' ||
+                                         expr[i] == '(' || expr[i] == ')'))
             {
+                if (expr[i] == '(')
+                {
+                    var = "";
+                    int level = 0;
+                    string sub = "";
+                    ++i;
+                    while (i < expr.length() && expr[i] != ')' && !level)
+                    {
+                        if (expr[i] == '(')
+                            level++;
+                        else if (expr[i] == ')')
+                            level--;
+                        sub += expr[i];
+                        i++;
+                    }
+                    Expression subExpr(sub);
+                    for (auto var : subExpr.varMap)
+                    {
+                        variables.insert(var.first); // 统计变量
+                    }
+                    i++;
+                    continue;
+                }
                 var += expr[i];
                 i++;
             }
-            variables.insert(var); // 统计变量
-            i--;                   // 回退一步，因为当前字符已经处理过了
+            if (var != "")
+            {
+                variables.insert(var); // 统计变量
+                i--;                   // 回退一步，因为当前字符已经处理过了
+            }
         }
     }
     for (auto var : variables)
@@ -362,5 +405,60 @@ Expression::Expression(const Expression &E)
  * @return 函数无返回值
  */
 Expression::Expression(int x) {}
+
+Expression::Expression(string s)
+{
+    expr = s;
+    set<string> variables; // 用于存储变量
+    for (int i = 0; i < expr.length(); i++)
+    {
+        char ch = expr[i];
+        if (isalpha(ch))
+        {
+            if (ch == 'e' && isScitificNotation(expr, i)) // 处理 e
+                continue;                                 // 科学计数法跳过
+
+            string var = "";
+            while (i < expr.length() && (isalpha(expr[i]) || isdigit(expr[i]) || expr[i] == '_' ||
+                                         expr[i] == '(' || expr[i] == ')'))
+            {
+                if (expr[i] == '(')
+                {
+                    var = "";
+                    ++i;
+                    int level = 0;
+                    string sub = "";
+                    while (i < expr.length() && expr[i] != ')' && !level)
+                    {
+                        if (expr[i] == '(')
+                            level++;
+                        else if (expr[i] == ')')
+                            level--;
+                        sub += expr[i];
+                        i++;
+                    }
+                    Expression subExpr(sub);
+                    for (auto var : subExpr.varMap)
+                    {
+                        variables.insert(var.first); // 统计变量
+                    }
+                    i++;
+                    continue;
+                }
+                var += expr[i];
+                i++;
+            }
+            if (var != "")
+                variables.insert(var); // 统计变量
+            i--;                       // 回退一步，因为当前字符已经处理过了
+        }
+    }
+    for (auto it = variables.rbegin(); it != variables.rend(); ++it)
+    {
+        varMap[*it] = NAN; // 变量值初始化为 NAN
+    }
+    varNum = variables.size(); // 变量个数
+    isPostFix = false;         // 表达式是否为后缀表达式
+}
 
 // Expression.cpp

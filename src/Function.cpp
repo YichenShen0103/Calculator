@@ -1,7 +1,9 @@
 #include "Function.h" // 包含本文件实现的函数声明位置所在的头文件
 #include <iostream>
+#include <unordered_map>
 #include <cmath>
 using namespace std;
+extern unordered_map<string, Function *> functions; // 定义一个变量哈希表
 
 /*
  * @brief 构造函数，调用父类的构造函数，并要求用户输入函数名
@@ -63,6 +65,9 @@ void Function::showFunction()
         cout << pair.first << ", ";
     }
     cout << "\b\b  \b\b) = " << nonPostFixExpr << endl;
+    // Test
+    this->infixToPostfix();
+    cout << expr << endl;
 }
 
 double Function::calculate()
@@ -107,14 +112,56 @@ double Function::calculate()
         {
             int index = -1; // 变量索引
             string var = "";
-            while (i < expr.size() && (isalpha(expr[i]) || isdigit(expr[i]) || expr[i] == '_'))
+            while (i < expr.size() && (isalpha(expr[i]) || isdigit(expr[i]) || expr[i] == '_' ||
+                                       expr[i] == '(' || expr[i] == ')'))
             {
+                if (expr[i] == '(') // 处理函数调用
+                {
+                    int level = 0;
+                    string subName = var;
+                    Function *subFunc = functions[subName];
+                    var = "";
+                    string exp = "";
+                    i++;
+                    vector<double> params(0);
+                    while (i < expr.size() && expr[i] != ')' && !level)
+                    {
+                        if (expr[i] == '(')
+                            level++;
+                        else if (expr[i] == ')')
+                            level--;
+                        else if (expr[i] == ',')
+                        {
+                            params.push_back(Function(exp, varMap).calculate()); // 递归计算函数值
+                            exp = "";
+                            i++;
+                            continue;
+                        }
+                        else if (isspace(expr[i]))
+                        {
+                            i++;
+                            continue;
+                        }
+                        exp += expr[i];
+                        i++;
+                    }
+                    params.push_back(Function(exp, varMap).calculate()); // 递归计算函数值
+                    int p = 0;
+                    for (const auto &pair : subFunc->varMap)
+                    {
+                        subFunc->varMap[pair.first] = params[p++];
+                    }
+                    sta[top++] = subFunc->calculate(); // 入栈
+                    i++;
+                    break; // 函数调用处理完毕
+                }
                 var += expr[i];
                 i++;
             }
             i--; // 回退一步，因为当前字符已经处理过了
 
-            sta[top++] = varMap[var];
+            if (var != "")
+                sta[top++] = varMap[var];
         }
         else if (expr[i] == '-') // 处理负号
         {
@@ -177,8 +224,23 @@ double Function::calculate()
     }
     else
     {
+        cout << endl;
         cout << "Error: Invalid expression" << endl; // 表达式格式错误
+        for (int i = 0; i < sta.size(); ++i)
+        {
+            cout << sta[i] << " ";
+        }
         return NAN;
+    }
+}
+
+Function::Function(string exp, unordered_map<string, double> varMap) : Expression(exp)
+{
+    name = "";
+    nonPostFixExpr = exp;
+    for (const auto &pair : varMap)
+    {
+        this->varMap[pair.first] = pair.second;
     }
 }
 

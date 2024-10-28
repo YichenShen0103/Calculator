@@ -19,6 +19,7 @@ public:
     Expression();                           // 默认构造函数
     Expression(int x);                      // 构造函数，用于特殊情况，一般不调用
     Expression(const Expression &E);        // 拷贝构造函数
+    Expression(string s);                   // 构造函数，用于字符串表达式
     bool hasVar();                          // 是否有变量
     ~Expression();                          // 析构函数
     double calculate();                     // 计算表达式的值

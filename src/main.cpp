@@ -1,19 +1,14 @@
 /*
  * Project:    Calculator
  * Author:     Yichen Shen
- * Date:       2024-10-22
+ * Date:       2024-10-28
  * Language:   C++
- * Version:    V3.0
- * Scale:      about 2600 lines in total
- */
-
-/*
- * TODO
- * 1. 实现函数计算器的函数调用
+ * Version:    V3.1
+ * Scale:      about 2800 lines in total
  */
 
 #include "Calculators.h" // 包含所有计算器和分菜单的头文件
-#include "Function.h"
+#include "Function.h"    // 全局变量声明所需的头文件
 #include <iostream>
 #include <unordered_map>
 using namespace std;
