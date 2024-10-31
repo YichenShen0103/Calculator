@@ -18,6 +18,8 @@
     |- Polyn.h
     |- Vector.h
     |- Calculators.h
+    |- Function.h
+    |- Matrix.h
   / src
     |- Expression.cpp
     |- LisNode.cpp
@@ -25,6 +27,8 @@
     |- Polyn.cpp
     |- Vector.cpp
     |- Calculators.cpp
+    |- Function.cpp
+    |- Matrix.cpp
   |- CMakeLists.txt
   |- README.md (This file)
 ```
