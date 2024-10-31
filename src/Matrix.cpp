@@ -14,7 +14,7 @@ using namespace std;
  */
 Matrix *Matrix::getSubMatrix(int r, int c)
 {
-    Matrix *sub = new Matrix(row - 1, col - 1); // 新建一个子矩阵
+    Matrix *sub = new Matrix(row - 1, col - 1, 0); // 新建一个子矩阵
     for (int i = 0; i < row; i++)
     {
         if (i == r)
@@ -147,31 +147,22 @@ void Matrix::subtractMatrix(Matrix *m)
  */
 double Matrix::determinant()
 {
-    if (isSquare == false)
+    if (!isSquare)
     {
         cout << "Error: Matrix is not square." << endl;
         return NAN; // 矩阵不是方阵，无法计算行列式
     }
-    // 基本情况: 1x1 矩阵
     if (row == 1)
-    {
         return data[0]->coef[0];
-    }
-    // 基本情况: 2x2 矩阵
     if (row == 2)
-    {
         return data[0]->coef[0] * data[1]->coef[1] - data[0]->coef[1] * data[1]->coef[0];
-    }
-
-    int det = 0;
+    double det = 0;
     for (int j = 0; j < row; j++)
-    {
-        // 拉普拉斯展开，(-1)^(i+j) * 矩阵[0][j] * 子矩阵行列式
+    { // 拉普拉斯展开，(-1)^(i+j) * 矩阵[0][j] * 子矩阵行列式
         Matrix *subMatrix = getSubMatrix(0, j);
         det += (j % 2 == 0 ? 1 : -1) * data[0]->coef[j] * subMatrix->determinant();
         delete subMatrix;
     }
-
     return det;
 }
 
@@ -182,18 +173,21 @@ double Matrix::determinant()
 void Matrix::T()
 {
     vector<Vector *> temp(col, nullptr);
-    for (int i = 0; i < row; i++)
+    for (int i = 0; i < col; i++)
     {
-        temp[i] = new Vector(col, 0); // 为每一行分配一个col个元素的向量
-        for (int j = 0; j < col; j++)
+        temp[i] = new Vector(row, 0); // 为每一行分配一个col个元素的向量
+        for (int j = 0; j < row; j++)
         {
             temp[i]->coef[j] = data[j]->coef[i]; // 转置矩阵
         }
     }
     for (int i = 0; i < row; i++)
     {
-        delete data[i];    // 释放原矩阵内存
-        data[i] = temp[i]; // 转置矩阵
+        delete data[i]; // 释放原矩阵内存
+    }
+    for (int i = 0; i < col; i++)
+    {
+        data[i] = temp[i]; // 转置矩阵赋值给矩阵
     }
 
     int tmp = row;

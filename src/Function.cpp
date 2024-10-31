@@ -65,9 +65,6 @@ void Function::showFunction()
         cout << pair.first << ", ";
     }
     cout << "\b\b  \b\b) = " << nonPostFixExpr << endl;
-    // Test
-    this->infixToPostfix();
-    cout << expr << endl;
 }
 
 double Function::calculate()

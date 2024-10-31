@@ -82,7 +82,7 @@ void Expression::infixToPostfix()
         else if (isalpha(ch) || ch == '_')
         {
             while (i < expr.length() && (isalpha(expr[i]) || isdigit(expr[i]) || expr[i] == '_' ||
-                                         expr[i] == '(' || expr[i] == ')'))
+                                         expr[i] == '('))
             {
                 if (expr[i] == '(')
                 {

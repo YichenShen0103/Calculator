@@ -7,6 +7,12 @@
  * Scale:      about 2800 lines in total
  */
 
+/*
+ * BUG
+ * 1、科学计算器的后括号被认为是变量的一部分
+ * 2、转置矩阵逻辑错误导致错误退出
+ */
+
 #include "Calculators.h" // 包含所有计算器和分菜单的头文件
 #include "Function.h"    // 全局变量声明所需的头文件
 #include <iostream>
