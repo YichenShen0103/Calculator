@@ -1,16 +1,10 @@
 /*
  * Project:    Calculator
  * Author:     Yichen Shen
- * Date:       2024-10-28
+ * Date:       2024-10-31
  * Language:   C++
- * Version:    V3.1
+ * Version:    V3.1.1
  * Scale:      about 2800 lines in total
- */
-
-/*
- * BUG
- * 1、科学计算器的后括号被认为是变量的一部分
- * 2、转置矩阵逻辑错误导致错误退出
  */
 
 #include "Calculators.h" // 包含所有计算器和分菜单的头文件
