@@ -96,9 +96,9 @@ void Vector::subtractVector(Vector *V2)
  * @param V2 另一个向量
  * @return int 向量点乘的结果
  */
-int Vector::dotProduct(Vector *V2)
+double Vector::dotProduct(Vector *V2)
 {
-    int result = 0;
+    double result = 0;
     for (int i = 0; i < V2->VectorDegree(); i++)
     {
         result += coef[i] * V2->coef[i]; // 向量的各个元素点乘
@@ -130,9 +130,9 @@ double Vector::magnitude()
  */
 double Vector::cosine(Vector *V2)
 {
-    int dot = dotProduct(V2); // 向量点乘
-    int mag1 = magnitude();   // 向量模长
-    int mag2 = V2->magnitude();
+    double dot = dotProduct(V2); // 向量点乘
+    double mag1 = magnitude();   // 向量模长
+    double mag2 = V2->magnitude();
     double result = dot / (mag1 * mag2); // 计算向量夹角
 
     delete V2;

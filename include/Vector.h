@@ -7,9 +7,9 @@ class Vector
     friend class Matrix;
 
 private:
-    int degree;                 // 维度
-    double magnitude();         // 向量模长
-    int dotProduct(Vector *V2); // 向量点乘
+    int degree;                    // 维度
+    double magnitude();            // 向量模长
+    double dotProduct(Vector *V2); // 向量点乘
 
 public:
     int *coef;                       // 系数数组
