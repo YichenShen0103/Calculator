@@ -161,6 +161,7 @@ char SciCalcMenu()
     cout << "2. Allocate storage space for parameterized expressions" << endl;
     cout << "3. Assign values to stored variables" << endl;
     cout << "4. Calculate expressions with variables" << endl;
+    cout << "t: Show Tree Structure of the expression" << endl;
     cout << "5. Help" << endl;
     cout << "q. Exit" << endl;
     cout << "Please select an option: ";
@@ -243,6 +244,15 @@ void ScienceCalculator()
             cout << "ScienceCalculator is a simple calculator for scientific calculations." << endl;
             cout << "You can calculate expressions with and without variables." << endl;
             cout << "For more detail, please read our instructions." << endl;
+            break;
+        }
+        case 't': // 显示表达式树结构
+        {
+            Expression *E = new Expression();
+            cout << "Tree Structure of the expression: " << endl;
+            shared_ptr<Tree> T = E->buildExpressionTree();
+            T->prettyPrintTree();
+            delete E;
             break;
         }
         case 'q': // 退出程序
@@ -649,6 +659,23 @@ void FunctionCalculator()
             }
             return;
         }
+        case 'r': // 显示函数关系
+        {
+            cout << "Which function? ";
+            string name;
+            cin >> name;
+            if (functions.find(name) == functions.end()) // 函数未定义
+            {
+                cout << "Function not defined!" << endl;
+            }
+            else
+            {
+                Function *F = functions[name];
+                shared_ptr<Tree> T = F->buildFuncTree();
+                T->prettyPrintTree();
+            }
+            break;
+        }
         default: // 输入错误
         {
             cout << "Invalid input!" << endl;
@@ -670,6 +697,7 @@ char FunctionMenu()
     cout << "2. Calculate function value with given independent variable values" << endl;
     cout << "3. View all function defined" << endl;
     cout << "4. Help" << endl;
+    cout << "r. Show function Relationship" << endl;
     cout << "q. Exit" << endl;
     cout << "Please select an option: ";
     cin >> mode;

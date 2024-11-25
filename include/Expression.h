@@ -3,7 +3,20 @@
 #include <vector>
 #include <string>
 #include <unordered_map>
+#include <memory>
 using namespace std;
+
+// TreeNode 的声明
+class Tree
+{
+public:
+    string val;
+    shared_ptr<Tree> left;
+    shared_ptr<Tree> right;
+
+    Tree(string value); // 构造函数，根据输入初始化一个结点
+    void prettyPrintTree();
+};
 
 // Expression 类的声明
 class Expression
@@ -13,8 +26,10 @@ protected:          // 保护成员，便于Function类继承使用
     int varNum;     // 变量个数
 
 public:
+    shared_ptr<Tree> buildExpressionTree(); // 根据后缀表达式构建表达式树
     unordered_map<string, double> varMap;   // 变量索引
     bool hasSub;                            // 是否有子表达式
+    bool isPost();                          // 是否是后缀表达式
     string expr;                            // 表达式字符串
     Expression();                           // 默认构造函数
     Expression(int x);                      // 构造函数，用于特殊情况，一般不调用

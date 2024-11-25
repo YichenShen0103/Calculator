@@ -1,5 +1,7 @@
 #include "Expression.h" // 包含本文件实现的函数的声明头文件
 #include <cctype>
+#include <queue>
+#include <memory>
 #include <cmath>
 #include <iostream>
 #include <unordered_map>
@@ -406,6 +408,10 @@ Expression::Expression(const Expression &E)
  */
 Expression::Expression(int x) {}
 
+/*
+ * @brief 构造函数的重载，不依赖用户输入
+ * @param string s 表达式字符串
+ */
 Expression::Expression(string s)
 {
     expr = s;
@@ -459,6 +465,128 @@ Expression::Expression(string s)
     }
     varNum = variables.size(); // 变量个数
     isPostFix = false;         // 表达式是否为后缀表达式
+}
+
+/*
+ * @brief 树结点的构造函数
+ * @param string value 结点的值
+ * @return 构造函数无返回值
+ */
+Tree::Tree(string value) : val(value), left(nullptr), right(nullptr) {}
+
+/*
+ * @brief 表达式是否为后缀表达式
+ * @return bool 是否为后缀表达式
+ */
+bool Expression::isPost()
+{
+    return isPostFix;
+}
+
+/*
+ * @brief 根据逆波兰表达式构建表达式树
+ * @return shared_ptr<Tree> 表达式树的根节点
+ */
+shared_ptr<Tree> Expression::buildExpressionTree()
+{
+    stack<shared_ptr<Tree>> st;
+    if (!isPost())
+        infixToPostfix();
+    int i = 0;
+    string token = "";
+    while (i < expr.length())
+    {
+        token = "";
+        while (!isspace(expr[i]) && i < expr.length())
+        {
+            token += expr[i];
+            i++;
+        }
+        i++;
+        if (token == "+" || token == "-" || token == "*" || token == "/" || token == "^")
+        {
+            // 运算符 -> 弹出两个操作数并构建子树
+            auto right = st.top();
+            st.pop();
+            auto left = st.top();
+            st.pop();
+            auto node = make_shared<Tree>(token);
+            node->left = left;
+            node->right = right;
+            st.push(node);
+        }
+        else
+        {
+            // 操作数 -> 创建新节点并入栈
+            st.push(make_shared<Tree>(token));
+        }
+    }
+    return st.top();
+}
+
+int getTreeDepth(shared_ptr<Tree> node)
+{
+    if (!node)
+        return 0;
+    return max(getTreeDepth(node->left), getTreeDepth(node->right)) + 1;
+}
+
+void Tree::prettyPrintTree()
+{
+    shared_ptr<Tree> root(this, [](Tree *) {});
+    if (!this)
+    {
+        cout << "Empty tree" << endl;
+        return;
+    }
+
+    // 获取树的深度
+    int depth = getTreeDepth(root);
+
+    deque<pair<shared_ptr<Tree>, int>> queue;
+    queue.push_back({root, 0}); // 加入根节点
+    int currentLevel = 0;
+    string result;
+    int maxWidth = pow(2, depth) - 1; // 树的最大宽度
+
+    // 层次遍历
+    while (!queue.empty())
+    {
+        deque<shared_ptr<Tree>> levelNodes;
+        while (!queue.empty() && queue.front().second == currentLevel)
+        {
+            shared_ptr<Tree> node = queue.front().first;
+            queue.pop_front();
+            levelNodes.push_back(node);
+        }
+
+        // 计算当前层的间距
+        int space = maxWidth / (pow(2, currentLevel + 1));
+        for (int i = 0; i < space; i++)
+        {
+            result += " ";
+        }
+
+        // 打印当前层的所有节点
+        for (auto &node : levelNodes)
+        {
+            result += node ? node->val : " ";
+            for (int i = 0; i < space * 2 + 1; i++)
+            {
+                result += " ";
+            }
+            if (node)
+            {
+                queue.push_back({node->left, currentLevel + 1});
+                queue.push_back({node->right, currentLevel + 1});
+            }
+        }
+
+        result += "\n";
+        currentLevel++;
+    }
+
+    cout << result;
 }
 
 // Expression.cpp

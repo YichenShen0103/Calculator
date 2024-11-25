@@ -1,5 +1,7 @@
 #include "Function.h" // 包含本文件实现的函数声明位置所在的头文件
 #include <iostream>
+#include <stack>
+#include <vector>
 #include <unordered_map>
 #include <cmath>
 using namespace std;
@@ -239,6 +241,66 @@ Function::Function(string exp, unordered_map<string, double> varMap) : Expressio
     {
         this->varMap[pair.first] = pair.second;
     }
+}
+
+shared_ptr<Tree> Function::buildFuncTree()
+{
+    if (!isPostFix)
+        infixToPostfix();
+    shared_ptr<Tree> root = make_shared<Tree>(name);
+    unordered_map<string, int> fun;
+
+    int i = 0;
+    string sub = "";
+    while (i < expr.length())
+    {
+        sub = "";
+        while (!isspace(expr[i]) && i < expr.length())
+        {
+            sub += expr[i];
+            i++;
+        }
+        i++;
+        if (isalpha(sub[0]))
+        {
+            int j = 0;
+            bool flag = false;
+            string subname = "";
+            while (j < sub.length() && isalpha(sub[j]) || isdigit(sub[j]) || sub[j] == '_' || sub[j] == '(' || sub[j] == ')' || sub[j] == ',')
+            {
+                if (sub[j] == '(')
+                    flag = true;
+                if (j != '(' && !flag)
+                    subname += sub[j];
+                j++;
+            }
+            if (j == sub.length() && flag)
+            {
+                if (functions.find(subname) != functions.end())
+                {
+                    if (fun.find(subname) == fun.end())
+                    {
+                        cout << "Error: Recursive function calls are not allowed." << endl;
+                        exit(1);
+                    }
+                    else
+                        fun[subname] = 1;
+                    shared_ptr<Tree> t = functions[subname]->buildFuncTree();
+                    if (root->left == nullptr)
+                        root->left = t;
+                    else if (root->right == nullptr)
+                        root->right = t;
+                    else
+                        cout << "Error: Sunfunctions are not allowed to have more than two" << endl;
+                }
+                else
+                {
+                    cout << "Error: Undefined function " << subname << endl;
+                }
+            }
+        }
+    }
+    return root;
 }
 
 // Function.cpp
