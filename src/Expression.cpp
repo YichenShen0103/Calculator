@@ -69,7 +69,7 @@ void Expression::infixToPostfix()
         if (isdigit(ch))
         {
             bool singleE = true; // 指示是否只有一个 e
-            while (i < expr.length() && (isdigit(expr[i]) || expr[i] == '.' || (expr[i] == 'e' && singleE)))
+            while (i < expr.length() && (isdigit(expr[i]) || expr[i] == '.' || expr[i] == '-' || (expr[i] == 'e' && singleE)))
             {
                 if (expr[i] == 'e')
                     singleE = false;
@@ -281,7 +281,7 @@ double Expression::calculate()
                     exp = exp * 10 + (expr[i] - '0');
                     i++;
                 }
-                num *= pow(10, exp) * sign; // 乘以 10 的指数次方
+                num *= pow(10, exp * sign); // 乘以 10 的指数次方
             }
             sta[top++] = num; // 入栈
             i--;              // 回退一步

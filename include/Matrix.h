@@ -8,9 +8,8 @@ using namespace std;
 class Matrix
 {
 private:
-    bool isSquare;                          // 是否是方阵
-    Matrix *getSubMatrix(int r, int c);     // 获取子矩阵
-    bool LUDecompose(Matrix &L, Matrix &U); // LU分解
+    bool isSquare;                      // 是否是方阵
+    Matrix *getSubMatrix(int r, int c); // 获取子矩阵
 
 public:
     int row, col;                      // 行数和列数
