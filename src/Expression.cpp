@@ -70,11 +70,14 @@ void Expression::infixToPostfix()
         // 如果当前字符是一个数字或字母（操作数），直接添加到后缀表达式中
         if (isdigit(ch))
         {
-            bool singleE = true; // 指示是否只有一个 e
-            while (i < expr.length() && (isdigit(expr[i]) || expr[i] == '.' || expr[i] == '-' || (expr[i] == 'e' && singleE)))
+            bool hasE = false;       // 指示是否有 e
+            bool singleMinus = true; // 指示是否只有一个 e
+            while (i < expr.length() && (isdigit(expr[i]) || expr[i] == '.' || (expr[i] == '-' && hasE && singleMinus) || (expr[i] == 'e' && !hasE)))
             {
+                if (expr[i] == '-')
+                    singleMinus = false;
                 if (expr[i] == 'e')
-                    singleE = false;
+                    hasE = true;
                 postfix += expr[i];
                 i++;
             }
@@ -205,7 +208,8 @@ Expression::Expression()
                     i++;
                     continue;
                 }
-                var += expr[i];
+                if (expr[i] != ')')
+                    var += expr[i];
                 i++;
             }
             if (var != "")
@@ -451,7 +455,8 @@ Expression::Expression(string s)
                     i++;
                     continue;
                 }
-                var += expr[i];
+                if (expr[i] != ')')
+                    var += expr[i];
                 i++;
             }
             if (var != "")
@@ -524,6 +529,11 @@ shared_ptr<Tree> Expression::buildExpressionTree()
     return st.top();
 }
 
+/*
+ * @brief 返回树的深度
+ * @param shared_ptr<Tree> node 树根节点
+ * @return int 树的深度
+ */
 int getTreeDepth(shared_ptr<Tree> node)
 {
     if (!node)
@@ -531,6 +541,10 @@ int getTreeDepth(shared_ptr<Tree> node)
     return max(getTreeDepth(node->left), getTreeDepth(node->right)) + 1;
 }
 
+/*
+ * @brief 格式化输出树
+ * @return 函数无返回值
+ */
 void Tree::prettyPrintTree()
 {
     shared_ptr<Tree> root(this, [](Tree *) {});
@@ -548,7 +562,8 @@ void Tree::prettyPrintTree()
     int currentLevel = 0;
     string result;
     int maxWidth = pow(2, depth) - 1; // 树的最大宽度
-
+    Tree emptyTree(" ");
+    shared_ptr<Tree> nullTree = make_shared<Tree>(emptyTree);
     // 层次遍历
     while (!queue.empty())
     {
@@ -577,8 +592,14 @@ void Tree::prettyPrintTree()
             }
             if (node)
             {
-                queue.push_back({node->left, currentLevel + 1});
-                queue.push_back({node->right, currentLevel + 1});
+                if (node->left)
+                    queue.push_back({node->left, currentLevel + 1});
+                else if (currentLevel + 1 < depth)
+                    queue.push_back({nullTree, currentLevel + 1});
+                if (node->right)
+                    queue.push_back({node->right, currentLevel + 1});
+                else if (currentLevel + 1 < depth)
+                    queue.push_back({nullTree, currentLevel + 1});
             }
         }
 

@@ -1,10 +1,6 @@
 CMakeFiles/Calculator.dir/src/Calculators.cpp.obj: \
  D:\code\vim\DataStr&Algr\Data\ Structures\ &\ Algorithms\ --\ Calculators\src\Calculators.cpp \
  D:/code/vim/DATAST~1/DATAST~1/include/Calculators.h \
- D:/code/vim/DATAST~1/DATAST~1/include/Vector.h \
- D:/code/vim/DATAST~1/DATAST~1/include/Polyn.h \
- D:/code/vim/DATAST~1/DATAST~1/include/ListNode.h \
- D:/code/vim/DATAST~1/DATAST~1/include/Expression.h \
  D:/msys64/mingw64/include/c++/14.2.0/vector \
  D:/msys64/mingw64/include/c++/14.2.0/bits/requires_hosted.h \
  D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h \
@@ -106,6 +102,10 @@ CMakeFiles/Calculator.dir/src/Calculators.cpp.obj: \
  D:/msys64/mingw64/include/c++/14.2.0/cerrno \
  D:/msys64/mingw64/include/c++/14.2.0/bits/charconv.h \
  D:/msys64/mingw64/include/c++/14.2.0/bits/basic_string.tcc \
+ D:/code/vim/DATAST~1/DATAST~1/include/Vector.h \
+ D:/code/vim/DATAST~1/DATAST~1/include/Polyn.h \
+ D:/code/vim/DATAST~1/DATAST~1/include/ListNode.h \
+ D:/code/vim/DATAST~1/DATAST~1/include/Expression.h \
  D:/msys64/mingw64/include/c++/14.2.0/unordered_map \
  D:/msys64/mingw64/include/c++/14.2.0/bits/unordered_map.h \
  D:/msys64/mingw64/include/c++/14.2.0/bits/hashtable.h \
@@ -179,15 +179,38 @@ CMakeFiles/Calculator.dir/src/Calculators.cpp.obj: \
  D:/msys64/mingw64/include/c++/14.2.0/bits/ostream.tcc \
  D:/msys64/mingw64/include/c++/14.2.0/istream \
  D:/msys64/mingw64/include/c++/14.2.0/bits/istream.tcc \
- D:/msys64/mingw64/include/c++/14.2.0/iomanip \
+ D:/msys64/mingw64/include/c++/14.2.0/algorithm \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/stl_algo.h \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/algorithmfwd.h \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/stl_heap.h \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/uniform_int_dist.h \
+ D:/msys64/mingw64/include/c++/14.2.0/pstl/glue_algorithm_defs.h \
+ D:/msys64/mingw64/include/c++/14.2.0/unordered_set \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/unordered_set.h \
+ D:/msys64/mingw64/include/c++/14.2.0/filesystem \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/fs_fwd.h \
+ D:/msys64/mingw64/include/c++/14.2.0/cstdint \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/chrono.h \
+ D:/msys64/mingw64/include/c++/14.2.0/ratio \
+ D:/msys64/mingw64/include/c++/14.2.0/limits \
+ D:/msys64/mingw64/include/c++/14.2.0/ctime \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/parse_numbers.h \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/fs_path.h \
  D:/msys64/mingw64/include/c++/14.2.0/locale \
  D:/msys64/mingw64/include/c++/14.2.0/bits/locale_facets_nonio.h \
- D:/msys64/mingw64/include/c++/14.2.0/ctime \
  D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/time_members.h \
  D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/messages_members.h \
  D:/msys64/mingw64/include/c++/14.2.0/bits/codecvt.h \
  D:/msys64/mingw64/include/c++/14.2.0/bits/locale_facets_nonio.tcc \
  D:/msys64/mingw64/include/c++/14.2.0/bits/locale_conv.h \
+ D:/msys64/mingw64/include/c++/14.2.0/iomanip \
  D:/msys64/mingw64/include/c++/14.2.0/bits/quoted_string.h \
  D:/msys64/mingw64/include/c++/14.2.0/sstream \
- D:/msys64/mingw64/include/c++/14.2.0/bits/sstream.tcc
+ D:/msys64/mingw64/include/c++/14.2.0/bits/sstream.tcc \
+ D:/msys64/mingw64/include/c++/14.2.0/codecvt \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/fs_dir.h \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/fs_ops.h \
+ D:/msys64/mingw64/include/c++/14.2.0/fstream \
+ D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/basic_file.h \
+ D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++io.h \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/fstream.tcc

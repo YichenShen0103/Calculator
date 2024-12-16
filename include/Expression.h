@@ -10,22 +10,22 @@ using namespace std;
 class Tree
 {
 public:
-    string val;
-    shared_ptr<Tree> left;
-    shared_ptr<Tree> right;
+    string val;             // 存储一个字符串值
+    shared_ptr<Tree> left;  // 左子树指针
+    shared_ptr<Tree> right; // 右子树指针
 
-    Tree(string value); // 构造函数，根据输入初始化一个结点
-    void prettyPrintTree();
+    Tree(string value);     // 构造函数，根据输入初始化一个结点
+    void prettyPrintTree(); // 格式化输出树
 };
 
 // Expression 类的声明
 class Expression
 {
-protected:          // 保护成员，便于Function类继承使用
-    bool isPostFix; // 是否是后缀表达式
-    int varNum;     // 变量个数
+protected:      // 保护成员，便于Function类继承使用
+    int varNum; // 变量个数
 
 public:
+    bool isPostFix;                         // 是否是后缀表达式
     shared_ptr<Tree> buildExpressionTree(); // 根据后缀表达式构建表达式树
     unordered_map<string, double> varMap;   // 变量索引
     bool hasSub;                            // 是否有子表达式

@@ -4,8 +4,7 @@ using namespace std;
 
 /*
  * @brief 用于多项式的加长
- * @param
- *   int m 新的多项式的阶数
+ * @param int m 新的多项式的阶数
  * @return 函数无返回值
  */
 void Polyn::expand(int m)
@@ -42,8 +41,7 @@ void Polyn::expand(int m)
 
 /*
  * @brief 构造函数，用于初始化一个N阶多项式
- * @param
- *   int N 多项式的阶数
+ * @param int N 多项式的阶数
  * @return 构造函数无返回值
  */
 Polyn::Polyn(int N)
@@ -111,8 +109,7 @@ int Polyn::PolynLength()
 
 /*
  * @brief 将当前多项式与另一个多项式相加
- * @param
- *   Polyn *P2 另一个多项式
+ * @param Polyn *P2 另一个多项式
  * @return 函数无返回值
  */
 void Polyn::addPolyn(Polyn *P2)
@@ -134,8 +131,7 @@ void Polyn::addPolyn(Polyn *P2)
 
 /*
  * @brief 将当前多项式减去另一个多项式
- * @param
- *   Polyn *P2 另一个多项式
+ * @param Polyn *P2 另一个多项式
  * @return 函数无返回值
  */
 void Polyn::subtractPolyn(Polyn *P2)
@@ -166,8 +162,7 @@ void Polyn::subtractPolyn(Polyn *P2)
 
 /*
  * @brief 将当前多项式与另一个多项式相乘
- * @param
- *   Polyn *P2 另一个多项式
+ * @param Polyn *P2 另一个多项式
  * @return 函数无返回值
  */
 void Polyn::multiplyPolyn(Polyn *P2)
@@ -195,8 +190,7 @@ void Polyn::multiplyPolyn(Polyn *P2)
 
 /*
  * @brief 计算当前多项式的导数
- * @param
- *   int n 导数的阶数
+ * @param int n 导数的阶数
  * @return 函数无返回值
  */
 void Polyn::derivative(int n)

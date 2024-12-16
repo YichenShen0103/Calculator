@@ -69,6 +69,11 @@ void Vector::addVector(Vector *V2)
     V2 = nullptr; // 释放V2内存空间
 }
 
+/*
+ * @brief 特殊构造函数，一般不主动调用，用于静默创建向量
+ * @param int N 向量的维数
+ * @param int x 无实意，用于与普通构造函数做区分
+ */
 Vector::Vector(int N, int x)
 {
     coef = new int[N]; // 为向量分配内存空间

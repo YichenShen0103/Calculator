@@ -195,6 +195,11 @@ void Matrix::T()
     col = tmp; // 矩阵维度交换
 }
 
+/*
+ * @brief 矩阵乘法计算，结果返回到原矩阵中
+ * @param Matrix *M 被左乘的矩阵
+ * @return 函数无返回值
+ */
 void Matrix::multiplyMatrix(Matrix *M)
 {
     if (col != M->row)

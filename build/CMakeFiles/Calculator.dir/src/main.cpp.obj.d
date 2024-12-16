@@ -1,8 +1,6 @@
 CMakeFiles/Calculator.dir/src/main.cpp.obj: \
  D:\code\vim\DataStr&Algr\Data\ Structures\ &\ Algorithms\ --\ Calculators\src\main.cpp \
  D:/code/vim/DATAST~1/DATAST~1/include/Calculators.h \
- D:/code/vim/DATAST~1/DATAST~1/include/Function.h \
- D:/code/vim/DATAST~1/DATAST~1/include/Expression.h \
  D:/msys64/mingw64/include/c++/14.2.0/vector \
  D:/msys64/mingw64/include/c++/14.2.0/bits/requires_hosted.h \
  D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h \
@@ -104,6 +102,8 @@ CMakeFiles/Calculator.dir/src/main.cpp.obj: \
  D:/msys64/mingw64/include/c++/14.2.0/cerrno \
  D:/msys64/mingw64/include/c++/14.2.0/bits/charconv.h \
  D:/msys64/mingw64/include/c++/14.2.0/bits/basic_string.tcc \
+ D:/code/vim/DATAST~1/DATAST~1/include/Function.h \
+ D:/code/vim/DATAST~1/DATAST~1/include/Expression.h \
  D:/msys64/mingw64/include/c++/14.2.0/unordered_map \
  D:/msys64/mingw64/include/c++/14.2.0/bits/unordered_map.h \
  D:/msys64/mingw64/include/c++/14.2.0/bits/hashtable.h \

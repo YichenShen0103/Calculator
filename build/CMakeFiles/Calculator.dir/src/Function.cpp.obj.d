@@ -172,15 +172,51 @@ CMakeFiles/Calculator.dir/src/Function.cpp.obj: \
  D:/msys64/mingw64/include/c++/14.2.0/bits/ostream.tcc \
  D:/msys64/mingw64/include/c++/14.2.0/istream \
  D:/msys64/mingw64/include/c++/14.2.0/bits/istream.tcc \
- D:/msys64/mingw64/include/c++/14.2.0/stack \
+ D:/msys64/mingw64/include/c++/14.2.0/filesystem \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/fs_fwd.h \
+ D:/msys64/mingw64/include/c++/14.2.0/cstdint \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/chrono.h \
+ D:/msys64/mingw64/include/c++/14.2.0/ratio \
+ D:/msys64/mingw64/include/c++/14.2.0/limits \
+ D:/msys64/mingw64/include/c++/14.2.0/ctime \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/parse_numbers.h \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/fs_path.h \
+ D:/msys64/mingw64/include/c++/14.2.0/locale \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/locale_facets_nonio.h \
+ D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/time_members.h \
+ D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/messages_members.h \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/codecvt.h \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/locale_facets_nonio.tcc \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/locale_conv.h \
+ D:/msys64/mingw64/include/c++/14.2.0/iomanip \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/quoted_string.h \
+ D:/msys64/mingw64/include/c++/14.2.0/sstream \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/sstream.tcc \
+ D:/msys64/mingw64/include/c++/14.2.0/codecvt \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/fs_dir.h \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/fs_ops.h \
+ D:/msys64/mingw64/include/c++/14.2.0/fstream \
+ D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/basic_file.h \
+ D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++io.h \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/fstream.tcc \
+ D:/msys64/mingw64/include/c++/14.2.0/queue \
  D:/msys64/mingw64/include/c++/14.2.0/deque \
  D:/msys64/mingw64/include/c++/14.2.0/bits/stl_deque.h \
  D:/msys64/mingw64/include/c++/14.2.0/bits/deque.tcc \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/stl_heap.h \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/stl_queue.h \
+ D:/msys64/mingw64/include/c++/14.2.0/unordered_set \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/unordered_set.h \
+ D:/msys64/mingw64/include/c++/14.2.0/stack \
  D:/msys64/mingw64/include/c++/14.2.0/bits/stl_stack.h \
+ D:/msys64/mingw64/include/c++/14.2.0/algorithm \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/stl_algo.h \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/algorithmfwd.h \
+ D:/msys64/mingw64/include/c++/14.2.0/bits/uniform_int_dist.h \
+ D:/msys64/mingw64/include/c++/14.2.0/pstl/glue_algorithm_defs.h \
  D:/msys64/mingw64/include/c++/14.2.0/cmath \
  D:/msys64/mingw64/include/math.h \
  D:/msys64/mingw64/include/c++/14.2.0/bits/specfun.h \
- D:/msys64/mingw64/include/c++/14.2.0/limits \
  D:/msys64/mingw64/include/c++/14.2.0/tr1/gamma.tcc \
  D:/msys64/mingw64/include/c++/14.2.0/tr1/special_function_util.h \
  D:/msys64/mingw64/include/c++/14.2.0/tr1/bessel_function.tcc \

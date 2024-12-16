@@ -4,7 +4,7 @@
 // Vector 类的声明
 class Vector
 {
-    friend class Matrix;
+    friend class Matrix; // 设置友元类，方便Matrix调用内容
 
 private:
     int degree;                    // 维度

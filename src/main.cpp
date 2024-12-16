@@ -1,10 +1,10 @@
 /*
- * Project:    Calculator
+ * Project:    Calculator06
  * Author:     Yichen Shen
- * Date:       2024-11-25
+ * Date:       2024-12-9
  * Language:   C++
- * Version:    V4.0
- * Scale:      about 2800 lines in total
+ * Version:    V6.0
+ * Scale:      about 3900 lines in total
  */
 
 #include "Calculators.h" // 包含所有计算器和分菜单的头文件
@@ -13,6 +13,7 @@
 #include <unordered_map>
 using namespace std;
 unordered_map<string, Function *> functions; // 定义一个变量哈希表
+bool change_since_save = true;               // 定义一个标志变量，用于判断是否有修改并需要保存
 
 int main()
 {
@@ -20,6 +21,7 @@ int main()
     while (true)
     {
         // 总目录
+        cout << "--------Main Menu--------" << endl;
         cout << "This Program is a integration of several calculators. Here are the menu: " << endl;
         cout << "1. Polynomial Calculator" << endl;
         cout << "2. Vector Calculator" << endl;
